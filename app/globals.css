@@ -308,7 +308,7 @@
 
 @font-face {
   font-family: "hemihead";
-  src: url("/fonts/hemihead.ttf") format("truetype");
+  src: url("/fonts/hemihead.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
