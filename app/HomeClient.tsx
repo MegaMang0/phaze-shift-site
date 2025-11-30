@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
@@ -7,7 +6,7 @@ import { useCharacter } from "@/contexts/CharacterContext";
 export default function HomePage() {
   const { currentCharacter } = useCharacter();
   return (
-  <div className={`stage-wrap page-about character-${currentCharacter}`}>
+  <div className={`stage-wrap homepage character-${currentCharacter}`}>
   <div className="stage">
     <main className="layout">
     
@@ -18,51 +17,38 @@ export default function HomePage() {
             <span className="gbtn-hit" aria-hidden />
               <GlowSelectButton
                 label="Home"
-                glowSrc="/assets/button-art/button-bg-glow.png"
-                fillSrc="/assets/button-art/button-bg-fill.png"
-                selectedSrc="/assets/button-art/button-fill-aqua.png"
-                outlineSrc="/assets/button-art/button-bg-outline.png"
                 disabled
               />
               <GlowSelectButton
                 label="About Game"
-                glowSrc="/assets/button-art/button-bg-glow.png"
-                fillSrc="/assets/button-art/button-bg-fill.png"
-                selectedSrc="/assets/button-art/button-fill-aqua.png"
-                outlineSrc="/assets/button-art/button-bg-outline.png"
+                href="/aboutgame"
                 toggleOnClick
                 useCharacterTheme={true}
               />
               <GlowSelectButton
                 label="More"
-                glowSrc="/assets/button-art/button-bg-glow.png"
-                fillSrc="/assets/button-art/button-bg-fill.png"
-                selectedSrc="/assets/button-art/button-fill-aqua.png"
-                outlineSrc="/assets/button-art/button-bg-outline.png"
+                href="/aboutcreator"
                 toggleOnClick
                 useCharacterTheme={true}
               />
-          
-              {/*-------------------------- SIDEBAR GRAPHICS --------------------------*/}
-    
-            <aside className="sidebar-info is-image" role="note" aria-label="Info panel">
-              
-              <h3 className="sidebar-info__title">Info:</h3>
-            
-              <div className="sidebar-info__divider" aria-hidden="true">-----------------</div>
-                <p className="sidebar-info__body">
-                  A new solo-dev project! A customizable action platformer, with two distinct playstyles inspired by Metroidvanias.
-                </p>
-            </aside>
           </div>
-            
-            <div className="character-badge-container">
-              <CharacterBadge
-              spinSpeed={10}
-              />
-            </div>
-        
         </aside>
+  
+          {/*-------------------------- SIDEBAR GRAPHICS --------------------------*/}          
+        
+          <div className="character-badge-container">
+            <CharacterBadge spinSpeed={10}/>
+          </div>
+
+          <div className="notification-box">
+            <img src= { currentCharacter === 'redd' 
+                    ? "/assets/website-gfx/redd-info-box.png"
+                    : "/assets/website-gfx/aqua-info-box.png"} 
+                alt="Info Box" 
+                className="info-box-image"
+            />
+          </div>
+          
           
         {/*-------------------------- PAGE ACCENTS --------------------------*/}
 
@@ -81,30 +67,35 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mainGIF">
-              <div className="gif-wrap">
-                <img src="/assets/gifs/main-title-gif.gif" alt="MainGIF" />
-                <div className="gif-caption"> &gt; &gt; Click For More! &lt; &lt; </div>
-              </div>
-            </div>  
-
+        {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
+        
             <div className="get-demo-notif">
             </div>
             
-            <div className="code-input-container">
+              <div className="code-input-container">
+              
             </div>
 
+            <div className="character-art">
+              <div className="aqua-image">
+                <img src="/assets/character-art/aqua-full-svg.png" />
+              </div>
+
+              <div className="redd-image">
+                <img src="/assets/character-art/redd-full-svg.png" />
+              </div>
+            </div>
+            
+            <div className="mainGIF">
+              <a href="/aboutgame" className="gif-button">
+                <img src="/assets/gifs/main-title-gif.gif" alt="MainGIF" />
+              </a>
+
+              <div className="gif-caption">
+                &gt; &gt; Click For More! &lt; &lt;
+              </div>
+            </div>
           </section>
-
-          <div className="character-art">
-            <div className="aqua-image">
-              <img src="/assets/character-art/aqua-full-svg.png" />
-            </div>
-            <div className="redd-image">
-              <img src="/assets/character-art/redd-full-svg.png" />
-            </div>
-          </div>
-          
         </main>
         </div>
     </div>
