@@ -11,7 +11,7 @@
     padding-right: 48px;
     padding-bottom: 0;
     padding-left: 0;
-    font-family: "Goldman", sans-serif;
+    font-family: "goldman", sans-serif;
     font-size: 1.2rem;
     font-weight: 550;
     font-variant-caps: normal;
@@ -267,7 +267,7 @@
   }
   .get-demo .submit-button {
     padding: 16px 36px; 
-    font-family: "HemiHead", sans-serif;
+    font-family: "hemihead", sans-serif;
     font-size: 1.2rem; 
     background: linear-gradient(135deg, #ff3f3f 0%, #2a5fc1 100%);
     color: white;
@@ -400,7 +400,7 @@
     padding-right: 90px;
     padding-bottom: 0px;
     padding-left: 0px;
-    font-family: "Goldman", sans-serif; 
+    font-family: "goldman", sans-serif; 
     font-size: 1.2rem; 
     font-weight: 550; 
     font-variant-caps: normal; 

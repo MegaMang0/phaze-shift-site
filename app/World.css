@@ -7,7 +7,7 @@
   .world .content-container {
     max-width: 1000px;
     margin: 0 auto;
-    font-family: "Goldman", sans-serif; 
+    font-family: "goldman", sans-serif; 
     font-size: 1.1rem; 
     font-weight: 550;  
     font-variant-caps: normal; 
@@ -23,7 +23,7 @@
     line-height: 1.2;
   }
   .world-intro {
-    font-family: "Goldman", sans-serif; 
+    font-family: "goldman", sans-serif; 
     font-size: 1.1rem; 
     font-weight: 550;  
     font-variant-caps: normal; 
@@ -90,7 +90,7 @@
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
-    font-family: "Goldman", sans-serif; 
+    font-family: "goldman", sans-serif; 
     font-size: 1.1rem; 
     font-weight: 550;  
     font-variant-caps: normal; 
