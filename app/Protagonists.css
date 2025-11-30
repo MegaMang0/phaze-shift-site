@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* #region : "Information / Content Setup" ------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .protagonists .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top:40px;
+    padding-right: 90px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-family: "Goldman", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 550;
+    font-variant-caps: small-caps;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 0.1em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .protagonists .content-section {
+    margin-bottom: 80px;
+  }
+  .protagonists .intro-paragraph {
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 768px) {
+    .protagonists .content-title {
+      font-size: 2.5rem;
+    }  
+    .protagonists .content-subtitle {
+      font-size: 1.8rem;
+    }    
+    .protagonists .content-paragraph {
+      font-size: 1.1rem;
+    }    
+    .protagonists .features-list {
+      font-size: 1.1rem;
+    }    
+    .protagonists .content-container {
+      padding: 20px 15px;
+    }
+  }
+/*#endregion*/
+
+/* #region : "GIF Setup" ------------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .protagonists {
+    --features-gif-size: 640px;
+  }
+  .protagonists .features-gif .gif-wrap {
+    position: relative;
+    pointer-events: none;
+    z-index: 2;  
+  }
+  .protagonists .features-gif img {
+    margin: 40 auto;
+    width: var(--features-gif-size);
+    height: auto;
+    transform-origin: center;
+    object-fit: contain;
+    pointer-events: none;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
+    display: block;
+  }
+/*#endregion*/
+
+/* #region : "Image Logic" ----------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .protagonists .content-with-image {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-right: 90px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-family: "Goldman", sans-serif; 
+    font-size: 1.4rem; 
+    font-weight: 550; 
+    font-variant-caps: small-caps; 
+    color: #fff; 
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  }
+/*#endregion*/

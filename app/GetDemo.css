@@ -1,0 +1,533 @@
+@import "tailwindcss";
+
+/* #region : "Information / Content Setup" ------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-right: 48px;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-family: "Goldman", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 550;
+    font-variant-caps: normal;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 0.1em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .get-demo .content-section {
+    margin-bottom: 80px;
+  }
+  .get-demo .content-get-demo {
+    overflow-x: hidden;
+  }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 768px) {
+  .get-demo .content-title {
+    font-size: 2.5rem;
+  }  
+  .get-demo .content-subtitle {
+    font-size: 1.8rem;
+  }  
+  .get-demo .content-paragraph {
+    font-size: 1.1rem;
+  }  
+  .get-demo .features-list {
+    font-size: 1.1rem;
+  }  
+  .get-demo .content-container {
+    padding: 20px 15px;
+  }
+}
+/*#endregion*/
+
+/* #region : "Banner Visuals Setup" -------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .content-get-demo {
+    padding-left: 0; 
+    overflow: visible;
+  }
+  .get-demo .content-get-demo .banner-wrap-demo {
+    position: relative;
+    left: -48px; 
+    overflow: visible;
+  }
+  .get-demo .banner-wrap-demo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .get-demo .banner-graphic-demo img {
+    display: block;
+    height: 240px;
+    width: auto;
+    max-width: none;
+    transform: scale(2.6, 1.65);
+  }
+  .get-demo .banner-graphic-demo {
+    transform-origin: center;
+  }
+  .get-demo .banner-title-demo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-top: 15px;
+    margin-left: 100px;
+    transform: scale(1.7, 1.65);
+  }
+  .get-demo .banner-title-demo img {
+    height: 240px;
+    width: auto;
+  }
+/*#endregion*/
+
+/* #region : "Character Visuals Setup" ----------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .character-art {
+    position: fixed;
+    top: 500;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+  }
+  .get-demo .redd-image img {
+    display: block;
+    height: 780px;
+    width: auto;
+    max-width: none;
+    margin-left: 225px;
+    margin-right: 350px;
+  }
+  .get-demo .aqua-image img {
+    display: block;
+    height: 780px;
+    width: auto;
+    max-width: none;
+    margin-left: 275px;
+  }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1440px) {
+    .get-demo .character-art {
+      top: 850;
+    }
+    .get-demo .redd-image img {
+      margin-left: 225px;
+      margin-right: 250px;
+    }
+    .get-demo .aqua-image img {
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 768px) {
+    .get-demo .redd-image img {
+      margin-left: 150px;
+      margin-right: 50px;
+    }
+    .get-demo .aqua-image img {
+      margin-left: 0px;
+    }
+  }
+  
+/*#endregion*/
+
+/* #region : "Get Demo Text" --------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .get-demo-notif {
+    font-family: "5by7", sans-serif;
+    font-size: 1.8rem;
+    margin: -30;
+    font-weight: 25;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+  }
+  .get-demo .get-demo-notif p {
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.1em;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .get-demo .redd-chibi, .get-demo .aqua-chibi {
+    display: flex;
+    align-items: center;
+  }
+  .get-demo .redd-chibi img, .get-demo .aqua-chibi img {
+    height: 80px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  }
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- Resizing Logic --------------------------- */
+/* ----------------------------------------------------------------------- */
+
+  @media (max-width: 1440px) {
+    .get-demo .get-demo-notif p {
+      font-family: "5by7", sans-serif;
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .get-demo .get-demo-notif p {
+      font-family: "5by7", sans-serif;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .get-demo .get-demo-notif {
+      margin-left: 30;
+      text-wrap-mode: nowrap;
+    }
+    .get-demo .get-demo-notif p {
+      font-family: "5by7", sans-serif;
+      font-size: 1rem;
+    }
+  }
+
+/*#endregion*/
+
+/* #region : "Code Input Field" ------------------------------------------ */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .code-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto 0 auto;
+    max-width: 500px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .get-demo .code-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 24px;
+    font-family: "5by7", sans-serif;
+    font-size: 1.3rem;
+    background: rgba(15, 15, 18, 0.8);
+    border: 2px solid rgba(63, 140, 255, 0.6);
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1em;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    outline: none;
+    line-height: 1.4;
+    min-height: 60px;
+    box-sizing: border-box;
+  }
+  .get-demo .code-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "5by7", sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 1.4; 
+  }
+  .get-demo .code-input:focus {
+    border-color: #ffb23f;
+    box-shadow: 0 0 0 3px rgba(63, 140, 255, 0.3);
+    background: rgba(15, 15, 18, 0.9);
+    transform: scale(1.02); 
+  }
+  .get-demo .submit-button {
+    padding: 16px 36px; 
+    font-family: "HemiHead", sans-serif;
+    font-size: 1.2rem; 
+    background: linear-gradient(135deg, #ff3f3f 0%, #2a5fc1 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(63, 140, 255, 0.3);
+    min-height: 54px;
+  }
+  .get-demo .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(63, 140, 255, 0.4);
+    background: linear-gradient(135deg, #ff5f4a 0%, #2f6ad4 100%);
+  }
+  .get-demo .submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(63, 140, 255, 0.3);
+  }
+  
+  /* ===================== SHAKE ANIMATION ===================== */
+
+  @keyframes shake {
+    0%   { transform: translateX(0); }
+    15%  { transform: translateX(-6px); }
+    30%  { transform: translateX(6px); }
+    45%  { transform: translateX(-5px); }
+    60%  { transform: translateX(5px); }
+    75%  { transform: translateX(-3px); }
+    90%  { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+  }
+  .get-demo .shake {
+    animation: shake 0.35s ease-in-out;
+  }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 768px) {
+    .get-demo .code-input-container {
+      padding: 0px 0px;
+      margin: 30px auto 0 auto;
+      gap: 15px;
+      margin-left: 75;
+    }
+    .get-demo .get-demo-notif {
+      margin-top: 30px;
+      margin-left: 45px;
+    }
+    .get-demo .code-input {
+      padding: 18px 20px;
+      font-size: 1.2rem;
+      max-width: 350px;
+      min-height: 56px;
+    }
+    .get-demo .submit-button {
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      min-height: 50px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .get-demo .code-input-container {
+      margin: 20px auto 0 auto;
+      gap: 12px;
+    }
+    .get-demo .code-input {
+      padding: 16px 18px;
+      font-size: 1.1rem;
+      max-width: 300px;
+      min-height: 52px;
+    }
+    .get-demo .submit-button {
+      padding: 12px 28px;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+  }
+/*#endregion*/
+
+/* #region : "Error Message Styles" -------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+.get-demo .error-message {
+  font-family: "5by7", sans-serif;
+  font-size: 1.4rem;
+  color: #ff3f3f;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.1em;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+@media (max-width: 768px) {
+  .get-demo .error-message {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .get-demo .error-message {
+    font-size: 1.1rem;
+  }
+}
+/*#endregion*/
+
+/* #region : "Image Logic - Sizing" -------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .content-with-image {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-right: 90px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-family: "Goldman", sans-serif; 
+    font-size: 1.2rem; 
+    font-weight: 550; 
+    font-variant-caps: normal; 
+    color: #fff; 
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  }
+/*#endregion*/
+
+/* #region : "Resizing Logic" -------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .get-demo .content-with-card {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  .get-demo .content-with-image {
+    padding-top: 0px;
+    padding-bottom: 25px;
+  }
+  .get-demo .content-section { margin-bottom: 32px; }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1024px) {
+
+    .get-demo .corner-banner {
+      top: -180px;
+      right: -150px;
+      width: 450px;
+      height: 500px;
+    }
+    .get-demo .title-banner {
+    top: 23px;
+    right: 5px;
+    width: 145px;
+    height: auto;
+    }
+    .get-demo .banner-graphic-demo img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+    }
+    .get-demo .banner-title-demo {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      margin-top: 10px;
+      margin-left: 175px;
+      transform: scale(1.4, 1.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+    .get-demo .text-content {
+      flex: 1;
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+    .get-demo .text-content .intro-paragraph {
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    } 
+    .get-demo .text-content .features-gif img {
+      max-width: 100%;
+      width: clamp(300px, 80vw, 500px);
+      height: auto;
+      margin: 20px auto;
+    }
+    .get-demo .corner-banner {
+      position: fixed;
+      top: -80px;
+      right: -280px;
+      width: 600px;
+      height: 600px;
+    }
+    .get-demo .corner-banner img {
+      width: 35%;
+      height: 100%;
+    }
+    .get-demo .title-banner {
+      position: fixed;
+      top: 51px;
+      right: -115px;
+      width: 208px;
+    }
+    .get-demo .title-banner img {
+      width: 35%;
+    } 
+    .get-demo .banner-graphic-demo img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+    }
+    .get-demo .banner-title-demo {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      margin-top: 10px;
+      margin-left: 175px;
+      transform: scale(1.4, 1.2);
+    }
+  }
+    .get-demo {
+      max-width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    .get-demo .stage,
+    .get-demo .layout {
+      max-width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+/*#endregion*/

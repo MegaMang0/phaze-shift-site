@@ -1,0 +1,498 @@
+@import "tailwindcss";
+
+/* #region : "Theme Image Setup" ----------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  /* Aqua theme */
+  .homepage.character-aqua .sidebar.art .sidebar-bg {
+    background-image: url("/assets/website-gfx/aqua-side-bar.png");
+  }
+
+  /* Redd theme */
+  .homepage.character-redd .sidebar.art .sidebar-bg {
+    background-image: url("/assets/website-gfx/redd-side-bar.png");
+  }
+/*#endregion*/
+
+/* #region : "GIF Setup" ------------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .mainGIF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 5;
+    width: 100%;
+    margin-top: 100px;
+    right: 100;
+    position: relative; 
+  }
+  .mainGIF img {
+    transform-origin: center;
+    pointer-events: auto;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
+    overflow: hidden;
+    max-width: none;
+    max-height: none;
+    width: 800px;
+    height: 450px;
+    object-fit: contain;
+  }
+  .mainGIF .gif-caption {
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-top: 20px;
+    padding: clamp(0px, 4vw, 12px);
+    color: #eaeaea;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(15, 15, 18, 0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+    pointer-events: none;
+    font-family: "5by7", sans-serif;
+    max-width: 80vw;
+    z-index: 60;
+  }
+  .content-demo {
+    padding-left: 0; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .banner-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+  }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1440px) {
+    .mainGIF img {
+      max-width: 75vw;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .mainGIF {
+      margin-top: 50px;
+      right: 0;
+    }
+    .mainGIF img {
+      max-width: 70vw;
+      border-radius: 40px;
+      width: 500px;
+      height: 300px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mainGIF {
+      margin-top: 10px;
+      left: 50;
+      top: 50px;
+    }    
+    .mainGIF img {
+      max-width: 65vw;
+      border-radius: 30px;
+      width: 500px;
+      height: 230px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mainGIF {
+      margin-top: 20px;
+    }    
+    .mainGIF img {
+      max-width: 60vw;
+      border-radius: 20px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+  .vh-stage .mainGIF {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+/*#endregion*/
+
+/* #region : "Banner Visuals Setup" -------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .content-demo .banner-wrap {
+    position: relative;
+    left: -48px; 
+    overflow: visible;
+  }
+  .banner-graphic img {
+    display: block;
+    height: 240px;
+    width: auto;
+    max-width: none;
+    transform: scale(2.6, 1.65);
+    z-index: 50;
+  }
+  .banner-graphic {
+    transform-origin: center;
+  }
+  .banner-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-top: 15px;
+    margin-left: 100px;
+    right: 100;
+    transform: scale(1.7, 1.65);
+  }
+  .banner-title img {
+    height: 240px;
+    width: auto;
+    z-index: 51;
+  }
+/* ---------------------------- Resizing Logic --------------------------- */
+
+    @media (max-width: 768px) { 
+    .banner-graphic {
+      margin-top: -50px;
+    }
+    .banner-title {
+      margin-top: 200px;
+    }
+    .banner-title img {
+      margin-top: -40px;
+    }
+  }
+
+/*#endregion*/
+
+/* #region : "Character Visuals Setup" ----------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .homepage .character-art {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  .homepage .redd-image {
+    position: absolute;
+    right: 50px;
+    top: 325px;
+    z-index: 12;
+  }
+  .homepage .redd-image img {
+    display: block;
+    height: 1040px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    transform: translateX(25%);
+    transition: transform 0.3s ease; 
+  }
+  .homepage .aqua-image {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    z-index: 11;
+  }
+  .homepage .aqua-image img {
+    display: block;
+    height: 1040px; 
+    width: auto;
+    max-width: none;
+    margin: 0;
+    transform: translateX(15%);
+    transition: transform 0.3s ease; 
+  }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1440px) {
+    
+    .homepage .redd-image {
+      right: 25px;
+      top: 325px;
+    }
+    .homepage .redd-image img {
+      height: 820px;
+    }     
+    .homepage .aqua-image {
+      right: -30px;
+      top: 0px;
+    }
+    .homepage .aqua-image img {
+      height: 820px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .homepage .redd-image {
+      right: 25px;
+      top: 675px;
+    }
+    .homepage .redd-image img {
+      height: 620px;
+    }     
+    .homepage .aqua-image {
+      right: -30px;
+      top: 300px;
+    }
+    .homepage .aqua-image img {
+      height: 620px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .homepage .redd-image {
+      right: -100px;
+    }    
+    .homepage .redd-image img {
+      transform: translateX(10%);
+    }    
+    .homepage .aqua-image {
+      right: -75px;
+      top: 400px;
+    }    
+    .homepage .aqua-image img {
+      transform: translateX(5%);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .homepage .redd-image {
+      right: 10px;
+    }    
+    .homepage .redd-image img {
+      transform: translateX(5%);
+    }    
+    .homepage .aqua-image {
+      right: -30px;
+    }    
+    .homepage .aqua-image img {
+      transform: translateX(0%);
+    }
+  }
+/*#endregion*/
+
+/* #region : "Notification Box" ------------------------------------------ */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .notification-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  .notification-box img {
+    height: min(300px, 30vh); /* Use 30% of viewport height, max 300px */
+    width: auto;
+    max-width: min(500px, 40vw); /* Use 40% of viewport width, max 500px */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-height: 800px) {
+    .notification-box {
+      top: 15px;
+      left: 15px;
+    } 
+    .notification-box img {
+      height: min(250px, 28vh);
+      max-width: min(400px, 35vw);
+    }
+  }
+
+  @media (max-height: 700px) {
+    .notification-box {
+      top: 10px;
+      left: 10px;
+    }
+    .notification-box img {
+      height: min(200px, 25vh);
+      max-width: min(350px, 30vw);
+    }
+  }
+/*#endregion*/
+
+/* #region : "Resizing Logic" -------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .homepage .sidebar-content{
+    margin-top: 100px;
+  }
+  .content-section { margin-bottom: 32px; }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1024px) {
+
+    .corner-banner {
+      top: -180px;
+      right: -150px;
+      width: 450px;
+      height: 500px;
+    }
+    .title-banner {
+      top: 23px;
+      right: 5px;
+      width: 145px;
+      height: auto;
+    }
+    .banner-graphic img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+    }
+    .homepage .sidebar-content{
+      margin-top: 200px;
+    }
+    .banner-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      margin-top: 10px;
+      margin-left: 175px;
+      transform: scale(1.4, 1.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .character-aqua .info-box-image {
+      content: url("/assets/website-gfx/aqua-info-box-long.png");
+    }
+    
+    .character-redd .info-box-image {
+      content: url("/assets/website-gfx/redd-info-box-long.png");
+    }
+    .corner-banner {
+      position: fixed;
+      top: -80px;
+      right: -280px;
+      width: 600px;
+      height: 600px;
+    }
+    .corner-banner img {
+      width: 35%;
+      height: 100%;
+    }
+    .title-banner {
+      position: fixed;
+      top: 51px;
+      right: -115px;
+      width: 208px;
+    }
+    .title-banner img {
+      width: 35%;
+    } 
+    .banner-graphic img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+    }
+    .banner-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      margin-top: 10px;
+      margin-left: 175px;
+      transform: scale(1.4, 1.2);
+    }
+  }
+.homepage {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.homepage .stage,
+.homepage .layout {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/*#endregion*/
+
+/* #region : "GIF Button Logic" -------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.gif-button {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+  text-decoration: none;
+  border-radius: 50px; /* Match your GIF round edges */
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+/* Hover: Soft gray glow */
+.gif-button:hover {
+  box-shadow: 0 0 25px rgba(180, 180, 180, 0.35);
+  transform: scale(1.015);
+}
+
+/* Active (click): Bright white glow */
+.gif-button:active {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.9);
+  transform: scale(0.985);
+  transition: box-shadow 0.1s ease;
+}
+
+/* Ensure GIF scales smoothly */
+.gif-button img {
+  display: block;
+  border-radius: inherit;
+}
+
+/* #endregion */

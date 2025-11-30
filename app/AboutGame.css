@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+
+/* #region : "Information / Content Setup" ------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top:100px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+  }
+  .content-section {
+    margin-bottom: 80px;
+  }
+  .content-container {
+    font-family: "Goldman", sans-serif; 
+    font-size: 1.1rem; 
+    font-weight: 550;  
+    font-variant-caps: normal; 
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    color: #fff;
+  }
+  .intro-paragraph {
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+  .intro-paragraph:last-child {
+    margin-bottom: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .content-title {
+      font-size: 2.5rem;
+    }    
+    .content-subtitle {
+      font-size: 1.8rem;
+    }    
+    .content-paragraph {
+      font-size: 1.1rem;
+    }    
+    .features-list {
+      font-size: 1.1rem;
+    }    
+    .content-container {
+      padding: 20px 15px;
+    }
+  }
+/*#endregion*/
+
+/* #region : "GIF Setup" ------------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  :root{
+    --features-gif-size: 640px;
+  }
+  .features-gif .gif-wrap {
+    position: relative;
+    pointer-events: none;
+    z-index: 2;  
+  }
+  .features-gif img {
+    margin: 40 auto;
+    width: var(--features-gif-size);
+    height: auto;
+    transform-origin: center;
+    object-fit: contain;
+    pointer-events: none;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
+    display: block;
+  }
+/*#endregion*/
