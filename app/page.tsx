@@ -1,6 +1,6 @@
-import HomePage from "@/app/HomePage";
-import "@/app/HomePage.css"; // page-scoped styles
+import HomePage from "./HomePage";
+import "./page.css";
 
-export default function Home() {
+export default function Page() {
   return <HomePage />;
 }

@@ -1,5 +1,4 @@
 "use client";
-import "@/app/HomePage.css"; 
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
