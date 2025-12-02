@@ -1140,7 +1140,7 @@ body {
 /* ----------------------------------------------------------------------- */
 
 .sidebar.art .gbtn {
-  --btnH: clamp(84px, 5vh, 128px);
+  --btnH: clamp(84px, 13vh, 128px);
   height: var(--btnH);
   width: 86%;
   align-self: center;  

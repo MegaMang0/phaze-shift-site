@@ -478,8 +478,15 @@
 }
 .homepage .stage,
 .homepage .layout {
-  max-width: 100%;
-  overflow-x: hidden;
+  position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-origin: top left; 
+    
+    /* 🛑 TEMPORARY FIX: Change the scaling factor to a fixed 1 */
+    /* ORIGINAL: transform: scale(var(--vhScale)); */
+    transform: scale(1); /* <--- Change the value inside scale() */
 }
 /*#endregion*/
 
