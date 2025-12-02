@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+.homepage-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* #region : "Theme Image Setup" ----------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
@@ -29,7 +36,9 @@
     width: 100%;
     margin-top: 100px;
     right: 100;
-    position: relative; 
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 60%);
   }
   .mainGIF img {
     transform-origin: center;
@@ -80,19 +89,26 @@
 /* ---------------------------- Resizing Logic --------------------------- */
 
   @media (max-width: 1440px) {
-    .mainGIF img {
-      max-width: 75vw;
-    }    
+    .mainGIF {
+      left: 50%;
+      transform: translate(-50%, 70%);
+    }   
     .mainGIF .gif-caption {
       font-size: 20px;
     }
+    .mainGIF img {
+      max-width: 70vw;
+      border-radius: 40px;
+      width: 700px;
+      height: 380px;
+    }    
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px) {  
     .mainGIF {
-      margin-top: 50px;
-      right: 0;
-    }
+      left: 50%;
+      transform: translate(-50%, 65%);
+    }    
     .mainGIF img {
       max-width: 70vw;
       border-radius: 40px;
@@ -107,9 +123,8 @@
 
   @media (max-width: 768px) {
     .mainGIF {
-      margin-top: 10px;
-      left: 50;
-      top: 50px;
+      left: 60%;
+      transform: translate(-50%, 85%);
     }    
     .mainGIF img {
       max-width: 65vw;
@@ -145,7 +160,11 @@
 /* #region : "Banner Visuals Setup" -------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
-
+  banner-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 60%);
+  }
   .content-demo .banner-wrap {
     position: relative;
     left: -48px; 
@@ -156,7 +175,7 @@
     height: 240px;
     width: auto;
     max-width: none;
-    transform: scale(1.8, 1.35);
+    transform: scale(2.6, 1.65);
     z-index: 50;
   }
   .banner-graphic {
@@ -170,9 +189,9 @@
     align-items: center;
     pointer-events: none;
     margin-top: 15px;
-    margin-left: 60px;
+    margin-left: 100px;
     right: 100;
-    transform: scale(1.3, 1.35);
+    transform: scale(1.7, 1.65);
   }
   .banner-title img {
     height: 240px;
@@ -200,7 +219,7 @@
 /* ----------------------------------------------------------------------- */
 
   .homepage .character-art {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -219,11 +238,11 @@
   }
   .homepage .redd-image img {
     display: block;
-    height: clamp(640px, 55vw, 820px);
+    height: 1040px;
     width: auto;
     max-width: none;
     margin: 0;
-    transform: translateX(10%);
+    transform: translateX(25%);
     transition: transform 0.3s ease; 
   }
   .homepage .aqua-image {
@@ -234,11 +253,11 @@
   }
   .homepage .aqua-image img {
     display: block;
-    height: clamp(640px, 55vw, 820px);
+    height: 1040px; 
     width: auto;
     max-width: none;
     margin: 0;
-    transform: translateX(5%);
+    transform: translateX(15%);
     transition: transform 0.3s ease; 
   }
 
@@ -456,10 +475,6 @@
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-}
-.homepage .layout {
-  max-width: 1440px;
-  margin: 0 auto;
 }
 .homepage .stage,
 .homepage .layout {
