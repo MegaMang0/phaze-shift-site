@@ -22,8 +22,8 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   :root{
-    --design-h: 900px;
-    --vhScale: min(1, calc(100svh / var(--design-h)));
+    --design-h: 1080px; /* <--- CHANGED 900px to 1080px for a 20% reduction in scale */
+  --vhScale: min(1, calc(100svh / var(--design-h)));
   }
   @supports (height: 100dvh) {
     :root { --vhScale: min(1, calc(100dvh / var(--design-h))); }
