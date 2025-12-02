@@ -1,3 +1,9 @@
+html {
+  /* This sets the base font size to 10px (16px * 0.625) 
+     so that 1rem = 10px, making sizing consistent and predictable. */
+  font-size: 62.5%; 
+}
+
 @import "tailwindcss";
 
 /* #region : "Base Theme & Fonts" ---------------------------------------- */
@@ -1143,11 +1149,9 @@ body {
   --btnH: clamp(84px, 13vh, 128px);
   height: var(--btnH);
   width: 86%;
-  align-self: center;
-  
+  align-self: center;  
   --spillV: min(6vh, 60px);
-  margin-left: var(--spillV);
-  
+  margin-left: var(--spillV);  
   font-size: calc(var(--btnH) * 0.22);
   --imgScale: 2.5;
 }
