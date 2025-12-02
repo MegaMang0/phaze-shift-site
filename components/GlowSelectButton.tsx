@@ -24,7 +24,7 @@ export default function GlowSelectButton({
   href,
   glowSrc = "/assets/button-art/button-bg-glow.png",
   fillSrc = "/assets/button-art/button-bg-fill.png",
-  selectedSrc = "/assets/button-art/button-fill-aqua.png",
+  selectedSrc = "/assets/button-art/button-fill.png",
   outlineSrc = "/assets/button-art/button-bg-outline.png",
   initialSelected = false,
   toggleOnClick = false,
