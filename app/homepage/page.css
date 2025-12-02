@@ -477,8 +477,7 @@
   overflow-y: hidden;
 }
 .homepage .stage,
-.homepage .layout {
-  position: relative;
+.homepage .layout {position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -486,7 +485,7 @@
     
     /* 🛑 TEMPORARY FIX: Change the scaling factor to a fixed 1 */
     /* ORIGINAL: transform: scale(var(--vhScale)); */
-    transform: scale(1); /* <--- Change the value inside scale() */
+    transform: scale(.8); /* <--- Change the value inside scale() */
 }
 /*#endregion*/
 
