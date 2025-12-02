@@ -369,15 +369,15 @@
 .sidebar .gbtn { position: relative; z-index: 1001; }
 
 .sidebar.art .gbtn {
-  --btnH: clamp(84px, 13vh, 128px);
+  --btnH: clamp(68px, 11vh, 110px);
   height: var(--btnH);
   width: 86%;
   align-self: center;
-  --spillV: 6svh; 
+  --spillV: 3svh; 
   transform: translateX(var(--spillV));
 
   font-size: calc(var(--btnH) * 0.22);
-  --imgScale: 2.5;
+  --imgScale: 2.1;
 }
 
 .sidebar.art .gbtn .gbtn-label {
