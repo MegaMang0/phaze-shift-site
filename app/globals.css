@@ -14,7 +14,7 @@
   --design-h: 1080;
 
   /* Global scale factor based on BOTH width & height */
-  --scale: min(calc(100vw / var(--design-w)), calc(100vh / var(--design-h)));
+  --scale: calc(100vw / var(--design-w));
 
   /* Sidebar + info card tuning */
   --sidebar-w: 360;
