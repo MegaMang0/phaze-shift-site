@@ -115,9 +115,12 @@
 
 .homepage .aqua-image img {
   display: block;
-  height: 1040px;
+  height: 1040px; 
   width: auto;
+  /* Add this line: */
+  transition: none; /* Kills the smooth animation/easing */
   transform: translateX(15%);
+  /* If you had a transition here before, remove it! */
 }
 .homepage .redd-image {
   position: absolute;
@@ -128,18 +131,17 @@
 
 .homepage .redd-image img {
   display: block;
-  height: 1040px;
+  height: 1040px; 
   width: auto;
+  /* Add this line: */
+  transition: none; /* Kills the smooth animation/easing */
   transform: translateX(25%);
+  /* If you had a transition here before, remove it! */
 }
 
 /* ---------------------------- Breakpoints --------------------------- */
 
 @media (max-width: 1440px) {
-  .homepage .aqua-image img,
-  .homepage .redd-image img {
-    height: 820px;
-  }
 
   .homepage .aqua-image {
     right: -30px;
@@ -153,10 +155,6 @@
 }
 
 @media (max-width: 1024px) {
-  .homepage .aqua-image img,
-  .homepage .redd-image img {
-    height: 620px;
-  }
 
   .homepage .aqua-image {
     right: -30px;
