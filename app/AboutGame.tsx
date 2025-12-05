@@ -3,12 +3,14 @@ import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import ScrollPrompt from "@/components/ScrollPrompt";
 import { useCharacter } from "@/contexts/CharacterContext";
+import DebugOverlay from '@/components/DebugOverlay';
 
 export default function AboutGamePage() {
   const { currentCharacter } = useCharacter();
   return (
   <div className={`stage-wrap page-about about-game character-${currentCharacter}`}>
   <div className="stage">
+        <DebugOverlay />
     <main className="layout">
 
         {/* ------------------- SIDEBAR + BUTTONS ------------------- */}

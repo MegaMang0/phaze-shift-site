@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* ==========================================================================
-   HOMEPAGE CONTAINER
-   -------------------------------------------------------------------------- */
-
 .homepage-container {
   position: relative;
   width: 100%;
@@ -11,289 +7,491 @@
   overflow: hidden;
 }
 
-/* ==========================================================================
-   THEME SIDEBAR IMAGE SWAP
-   -------------------------------------------------------------------------- */
+/* #region : "Theme Image Setup" ----------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
 
-.homepage.character-aqua .sidebar.art .sidebar-bg {
-  background-image: url("/assets/website-gfx/aqua-side-bar.png");
-}
+  /* Aqua theme */
+  .homepage.character-aqua .sidebar.art .sidebar-bg {
+    background-image: url("/assets/website-gfx/aqua-side-bar.png");
+  }
 
-.homepage.character-redd .sidebar.art .sidebar-bg {
-  background-image: url("/assets/website-gfx/redd-side-bar.png");
-}
+  /* Redd theme */
+  .homepage.character-redd .sidebar.art .sidebar-bg {
+    background-image: url("/assets/website-gfx/redd-side-bar.png");
+  }
+/*#endregion*/
 
-/* ==========================================================================
-   MAIN GIF SECTION
-   -------------------------------------------------------------------------- */
+/* #region : "GIF Setup" ------------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
 
-.mainGIF {
-  position: absolute;
-  left: 50%;
-  top: calc(580px * var(--scale));
-  transform: translate(-50%, 0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-}
+  .mainGIF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 5;
+    width: 100%;
+    margin-top: 100px;
+    right: 100;
+    position: absolute;
+    left: 50%;
+      transform: translate(-50%, 80%);
+  }
+  .mainGIF img {
+    transform-origin: center;
+    pointer-events: auto;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
+    overflow: hidden;
+    max-width: none;
+    max-height: none;
+      width: 560px;
+      height: 320px;
+    object-fit: contain;
+  }
+  .mainGIF .gif-caption {
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-top: 20px;
+    padding: clamp(0px, 4vw, 12px);
+    color: #eaeaea;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(15, 15, 18, 0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+    pointer-events: none;
+    font-family: "5by7", sans-serif;
+    max-width: 80vw;
+    z-index: 60;
+  }
+  .content-demo {
+    padding-left: 0; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .banner-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+  }
 
-.mainGIF img {
-  width: 800px;
-  height: 450px;
-  border-radius: 50px;
-  box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
-  object-fit: contain;
-}
+/* ---------------------------- Resizing Logic --------------------------- */
 
+  @media (max-width: 1440px) {
+    .mainGIF {
+      left: 50%;
+      transform: translate(-50%, 80%);
+    }   
+    .mainGIF .gif-caption {
+      font-size: 20px;
+    }
+    .mainGIF img {
+      max-width: 70vw;
+      border-radius: 40px;
+      width: 560px;
+      height: 320px;
+    }    
+  }
 
-.mainGIF .gif-caption {
-  font-family: "5by7", sans-serif;
-  font-size: calc(22px * var(--scale));
-  margin-top: calc(20px * var(--scale));
-  color: #eaeaea;
-  letter-spacing: 0.2em;
-  text-align: center;
-  z-index: 60;
-  pointer-events: none;
-}
+  @media (max-width: 1024px) {  
+    .mainGIF {
+      left: 50%;
+      transform: translate(-50%, 70%);
+    }    
+    .mainGIF img {
+      max-width: 70vw;
+      border-radius: 40px;
+      width: 500px;
+      height: 280px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  }
 
-/* ==========================================================================
-   BANNER SECTION
-   -------------------------------------------------------------------------- */
+  @media (max-width: 768px) {
+    .mainGIF {
+      left: 60%;
+      transform: translate(-50%, 65%);
+    }    
+    .mainGIF img {
+      border-radius: 30px;
+      width: 500px;
+      height: 200px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+  }
 
-.banner-wrap {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: calc(60px * var(--scale));
-  width: 100%;
-}
+  @media (max-width: 480px) {
+    .mainGIF {
+      margin-top: 20px;
+    }    
+    .mainGIF img {
+      max-width: 60vw;
+      border-radius: 20px;
+    }    
+    .mainGIF .gif-caption {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+  .vh-stage .mainGIF {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+/*#endregion*/
 
-.banner-graphic img {
-  display: block;
-  height: calc(240px * var(--scale));
-  transform: scale(calc(2.6 * var(--scale)), calc(1.65 * var(--scale)));
-}
+/* #region : "Banner Visuals Setup" -------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+  banner-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 60%);
+  }
+  .content-demo .banner-wrap {
+    position: relative;
+    left: -48px; 
+    overflow: visible;
+  }
+  .banner-graphic img {
+    display: block;
+    height: 240px;
+    width: auto;
+    max-width: none;
+    transform: scale(2.6, 1.65);
+    z-index: 50;
+  }
+  .banner-graphic {
+    transform-origin: center;
+  }
+  .banner-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-top: 15px;
+    margin-left: 100px;
+    right: 100;
+    transform: scale(1.7, 1.65);
+  }
+  .banner-title img {
+    height: 240px;
+    width: auto;
+    z-index: 51;
+  }
+/* ---------------------------- Resizing Logic --------------------------- */
 
-.banner-title {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  margin-top: calc(15px * var(--scale));
-  margin-left: calc(100px * var(--scale));
-  transform: scale(calc(1.7 * var(--scale)), calc(1.65 * var(--scale)));
-}
+  @media (max-width: 1024px) {
+    .title-banner {
+      top: 23px;
+      right: 5px;
+      width: 145px;
+      height: auto;
+    }
+    .banner-graphic img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+      margin-top: -50px;
+    }
+    .banner-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      margin-top: 10px;
+      margin-left: 175px;
+      transform: scale(1.4, 1.2);
+      margin-top: -40px;
+    }
+  }
+    @media (max-width: 768px) { 
+    .banner-graphic {
+      margin-top: -60px;
+    }
+    .title-banner {
+      position: fixed;
+      top: 51px;
+      right: -115px;
+      width: 208px;
+    }
+    .title-banner img {
+      width: 35%;
+    } 
+    .banner-graphic img {
+      display: block;
+      height: 240px;
+      width: auto;
+      max-width: none;
+      transform: scale(1, 1.2);
+      margin-top: 0px;
+    }
+    .banner-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      transform: scale(1.4, 1.2);
+    }
+  }
+  @media (max-width: 600px) {.banner-title {
+    margin-top: -50px;
+    margin-left: 135px;
+    margin-right: 80px;
+  }
+  } 
 
-.banner-title img {
-  height: calc(240px * var(--scale));
-  width: auto;
-}
+/*#endregion*/
 
-/* ==========================================================================
-   CHARACTER ART (FIXED-SIZE + BREAKPOINT CONTROLLED)
-   -------------------------------------------------------------------------- */
+/* #region : "Character Visuals Setup" ----------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
 
-.homepage .character-art {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.homepage .aqua-image {
-  position: absolute;
-  right: 0;
-  top: -150px;
-  z-index: 11;
-}
-
-.homepage .aqua-image img {
-  display: block;
-  height: 1040px; 
-  width: auto;
-  /* Add this line: */
-  transition: none; /* Kills the smooth animation/easing */
-  transform: translateX(15%);
-  /* If you had a transition here before, remove it! */
-}
-.homepage .redd-image {
-  position: absolute;
-  right: 50px;
-  top: 325px;
-  z-index: 12;
-}
-
-.homepage .redd-image img {
-  display: block;
-  height: 1040px; 
-  width: auto;
-  /* Add this line: */
-  transition: none; /* Kills the smooth animation/easing */
-  transform: translateX(25%);
-  /* If you had a transition here before, remove it! */
-}
-
-/* ---------------------------- Breakpoints --------------------------- */
-
-@media (max-width: 1440px) {
-
-  .homepage .aqua-image {
-    right: -30px;
+  .homepage .character-art {
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
-
   .homepage .redd-image {
-    right: 25px;
-    top: 325px;
+    position: absolute;
+      right: 25px;
+      top: 325px;
+    z-index: 12;
   }
-}
-
-@media (max-width: 1024px) {
-
-  .homepage .aqua-image {
-    right: -30px;
-    top: 300px;
-  }
-
-  .homepage .redd-image {
-    right: 25px;
-    top: 675px;
-  }
-}
-
-@media (max-width: 768px) {
-  .homepage .aqua-image img {
-    transform: translateX(5%);
-  }
-
   .homepage .redd-image img {
-    transform: translateX(10%);
+    display: block;
+      height: 820px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    transform: translateX(25%);
+    transition: transform 0.3s ease; 
   }
-
   .homepage .aqua-image {
-    right: -75px;
-    top: 400px;
+    position: absolute;
+      right: -30px;
+      top: 0px;
+    z-index: 11;
   }
-
-  .homepage .redd-image {
-    right: -100px;
-  }
-}
-
-@media (max-width: 480px) {
   .homepage .aqua-image img {
-    transform: translateX(0%);
+    display: block;
+      height: 820px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    transform: translateX(15%);
+    transition: transform 0.3s ease; 
   }
 
-  .homepage .redd-image img {
-    transform: translateX(5%);
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1440px) {
+    
+    .homepage .redd-image {
+      right: 25px;
+      top: 325px;
+    }
+    .homepage .redd-image img {
+      height: 820px;
+    }     
+    .homepage .aqua-image {
+      right: -30px;
+      top: 0px;
+    }
+    .homepage .aqua-image img {
+      height: 820px;
+    }
   }
 
-  .homepage .aqua-image {
-    right: -30px;
+  @media (max-width: 1024px) {
+    .homepage .redd-image {
+      right: 25px;
+      top: 500px;
+    }
+    .homepage .redd-image img {
+      height: 620px;
+    }     
+    .homepage .aqua-image {
+      right: -30px;
+      top: 220px;
+    }
+    .homepage .aqua-image img {
+      height: 620px;
+    }
   }
 
-  .homepage .redd-image {
-    right: 10px;
+  @media (max-width: 768px) {
+    .homepage .redd-image {
+      right: 0px;
+      top: 580px;
+    }    
+    .homepage .redd-image img {
+      height: 540px;
+    }    
+    .homepage .aqua-image {
+      right: -30px;
+      top: 360px;
+    }    
+    .homepage .aqua-image img {
+      height: 520px;
+    }
   }
+
+  @media (max-width: 480px) {
+    .homepage .redd-image {
+      right: 10px;
+    }     
+    .homepage .aqua-image {
+      right: -30px;
+    }    
+  }
+/*#endregion*/
+
+/* #region : "Notification Box" ------------------------------------------ */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .notification-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  .notification-box img {
+    height: min(300px, 30vh); /* Use 30% of viewport height, max 300px */
+    width: auto;
+    max-width: min(500px, 40vw); /* Use 40% of viewport width, max 500px */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-height: 800px) {
+    .notification-box {
+      top: 15px;
+      left: 15px;
+    } 
+    .notification-box img {
+      height: min(250px, 28vh);
+      max-width: min(400px, 35vw);
+    }
+  }
+
+  @media (max-height: 700px) {
+    .notification-box {
+      top: 10px;
+      left: 10px;
+    }
+    .notification-box img {
+      height: min(200px, 25vh);
+      max-width: min(350px, 30vw);
+    }
+  }
+/*#endregion*/
+
+/* #region : "Resizing Logic" -------------------------------------------- */
+/* Click to Expand / Shrink Whole Section */ 
+/* ----------------------------------------------------------------------- */
+
+  .homepage .sidebar-content{
+    margin-top: 100px;
+  }
+  .content-section { margin-bottom: 32px; }
+
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 1024px) {
+
+    .homepage .sidebar-content{
+      margin-top: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .character-aqua .info-box-image {
+      content: url("/assets/website-gfx/aqua-info-box-long.png");
+    }
+    
+    .character-redd .info-box-image {
+      content: url("/assets/website-gfx/redd-info-box-long.png");
+    }
+  }
+.homepage {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-
-/* ==========================================================================
-   NOTIFICATION BOX
-   -------------------------------------------------------------------------- */
-
-.notification-box {
-  position: fixed;
-  top: calc(20px * var(--scale));
-  left: calc(20px * var(--scale));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  z-index: 1000;
-  transition: all 0.3s ease;
+.homepage .stage,
+.homepage .layout {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+/*#endregion*/
 
-.notification-box img {
-  height: min(calc(300px * var(--scale)), 30vh);
-  width: auto;
-  max-width: min(calc(500px * var(--scale)), 40vw);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
-  transition: all 0.3s ease;
-}
-
-/* ==========================================================================
-   GIF BUTTON LOGIC
-   -------------------------------------------------------------------------- */
+/* #region : "GIF Button Logic" -------------------------------------- */
+/* ------------------------------------------------------------------- */
 
 .gif-button {
   display: inline-block;
   cursor: pointer;
   line-height: 0;
   text-decoration: none;
-  border-radius: calc(50px * var(--scale));
+  border-radius: 50px; /* Match your GIF round edges */
   transition: box-shadow 0.25s ease, transform 0.15s ease;
 }
 
+/* Hover: Soft gray glow */
 .gif-button:hover {
-  box-shadow: 0 0 calc(25px * var(--scale)) rgba(180, 180, 180, 0.35);
+  box-shadow: 0 0 25px rgba(180, 180, 180, 0.35);
   transform: scale(1.015);
 }
 
+/* Active (click): Bright white glow */
 .gif-button:active {
-  box-shadow: 0 0 calc(35px * var(--scale)) rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.9);
   transform: scale(0.985);
+  transition: box-shadow 0.1s ease;
 }
 
-/* ==========================================================================
-   RESPONSIVE ADJUSTMENTS
-   -------------------------------------------------------------------------- */
-
-@media (max-width: 1440px) {
-  .mainGIF img {
-    width: 700px;
-    height: 380px;
-  }
+/* Ensure GIF scales smoothly */
+.gif-button img {
+  display: block;
+  border-radius: inherit;
 }
 
-
-@media (max-width: 1024px) {
-  .mainGIF img {
-    width: 500px;
-    height: 300px;
-  }
-
-  .banner-title {
-    transform: scale(1.4, 1.2);
-  }
-}
-
-@media (max-width: 768px) {
-  .mainGIF img {
-    width: 420px;
-    height: 230px;
-  }
-}
-
-
-/* ==========================================================================
-   PAGE SAFETY (NO OVERFLOW)
-   -------------------------------------------------------------------------- */
-
-.homepage {
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.homepage .stage,
-.homepage .layout {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+/* #endregion */
