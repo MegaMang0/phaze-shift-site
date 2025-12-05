@@ -2,11 +2,12 @@
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
-
+import DebugOverlay from '@/components/DebugOverlay';
 export default function HomePage() {
   const { currentCharacter } = useCharacter();
   return (
   <div className="homepage-container">
+      <DebugOverlay />
     <div className={`stage-wrap homepage character-${currentCharacter}`}>
       <div className="stage">
         <main className="layout">
