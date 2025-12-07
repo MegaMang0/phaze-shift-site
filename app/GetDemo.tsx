@@ -3,6 +3,7 @@ import { useState } from "react";
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
+import DebugOverlay from '@/components/DebugOverlay';
 
 // List of valid codes (unlimited use)
 const VALID_CODES = ["recruiter", "resume", "beta tester", "alex"];
@@ -59,6 +60,7 @@ export default function GetDemo() {
   <div className={`stage-wrap page-about get-demo character-${currentCharacter}`}>
     <div className="stage">
       <main className="layout">
+            <DebugOverlay />
 
         {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
         <aside className="sidebar art">
