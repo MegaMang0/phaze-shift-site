@@ -1,15 +1,23 @@
 "use client";
 import CharacterBadge from "@/components/CharacterBadge";
+import MenuButton from "@/components/MenuButton";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
 import DebugOverlay from '@/components/DebugOverlay';
+
+  function toggleSidebar() {
+    document.body.classList.toggle("sidebar-open");
+  }
+
 export default function HomePage() {
   const { currentCharacter } = useCharacter();
   return (
   <div className="homepage-container">
-      <DebugOverlay />
+    <DebugOverlay />
     <div className={`stage-wrap homepage character-${currentCharacter}`}>
       <div className="stage">
+              <MenuButton onClick={toggleSidebar} />
+              
         <main className="layout">
         
           {/* ------------------- SIDEBAR + BUTTONS ------------------- */}

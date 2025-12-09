@@ -122,10 +122,28 @@
     }
   }
   @media (max-width: 768px) {
-    .get-demo .banner-title-demo {
+  .get-demo .banner-graphic-demo img,
+  .get-demo .banner-title-demo img {
+      height: auto !important;
+      max-height: 18vh;   /* shrinks with viewport height */
+      width: auto;
+    }
+  .get-demo .banner-wrap-demo {
+    transform: scale(calc(0.6 + (100vh / 1200)));
+    transform-origin: top left;
+    max-height: 22vh;
+    width: 100%;
+  }
+  .get-demo .banner-graphic-demo img,
+  .get-demo .banner-title-demo img {
+    height: auto !important;
+    max-height: 18vh;
+    width: auto;
+  }
+  .get-demo .banner-title-demo {
       margin-top: 10px;
       right: -80;
-    }
+  }
   }
   @media (max-width: 600px) {
     
@@ -248,18 +266,13 @@
 
       z-index: -1;
     }
-
-    /* Correct selector! */
     .get-demo .character-art img {
       height: min(45vh, 420px);
       width: auto;
     }
-
-    /* Offsets per character */
     .get-demo .character-art .redd-image {
       margin-left: 14vw;
     }
-
     .get-demo .character-art .aqua-image {
       margin-right: -8vw;
     }
@@ -330,21 +343,21 @@
     }
   }
   @media (max-width: 600px) {
-  .get-demo .get-demo-notif {
-    margin-top: 55px !important;  
-    margin-left: 0 !important; 
-    justify-content: center;   
-  }
+    .get-demo .get-demo-notif {
+      margin-top: 55px !important;  
+      margin-left: 0 !important; 
+      justify-content: center;   
+    }
 
-  .get-demo .get-demo-notif p {
-    font-size: 0.70rem;
-  }
+    .get-demo .get-demo-notif p {
+      font-size: 0.70rem;
+    }
 
-  .get-demo .redd-chibi img,
-  .get-demo .aqua-chibi img {
-    height: 60px;                  /* scale chibis down a bit */
+    .get-demo .redd-chibi img,
+    .get-demo .aqua-chibi img {
+      height: 60px;                  /* scale chibis down a bit */
+    }
   }
-}
 
 /*#endregion*/
 
@@ -444,26 +457,23 @@
       align-items: center !important;
       margin-right: auto !important;
       max-width: 500px;
-      margin-left: 100px; /* sidebar width at mobile */
+      margin-left: 100px; 
       width: calc(100% - 100px);
       display: flex;
       justify-content: center;
       margin-top: 20px !important;
     }
 
-  /* Ensure the input itself stays centered */
   .get-demo .code-input {
     margin-left: auto;
     margin-right: auto;
 
     padding: 14px 18px;
     font-size: 1.0rem;
-    max-width: 280px;               /* narrower */
-    min-height: 48px;               /* shorter */
+    max-width: 280px;
+    min-height: 48px;
     border-width: 1.5px;  
   }
-
-  /* Same for button */
   .get-demo .submit-button {
     margin-left: auto;
     margin-right: auto;
@@ -475,6 +485,28 @@
   }
   }
   @media (max-width: 600px) {
+    
+    .get-demo .banner-graphic-demo img,
+    .get-demo .banner-title-demo img {
+        height: auto !important;
+        max-height: 18vh;   /* shrinks with viewport height */
+        width: auto;
+      }
+    .get-demo .banner-wrap-demo {
+      transform: scale(calc(0.6 + (100vh / 1200)));
+      transform-origin: top left;
+      max-height: 22vh;
+      width: 100%;
+    }
+    .get-demo .banner-graphic-demo img,
+    .get-demo .banner-title-demo img {
+      height: auto !important;
+      max-height: 18vh;
+      width: auto;
+    }
+    .get-demo .banner-title-demo {
+        margin-top: 10px;
+     }
     .get-demo .code-input-container {
       margin-left: 60px;
     }

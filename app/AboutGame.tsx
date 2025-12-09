@@ -1,16 +1,22 @@
 "use client";
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
+import MenuButton from "@/components/MenuButton";
 import ScrollPrompt from "@/components/ScrollPrompt";
 import { useCharacter } from "@/contexts/CharacterContext";
 import DebugOverlay from '@/components/DebugOverlay';
+
+  function toggleSidebar() {
+    document.body.classList.toggle("sidebar-open");
+  }
 
 export default function AboutGamePage() {
   const { currentCharacter } = useCharacter();
   return (
   <div className={`stage-wrap page-about about-game character-${currentCharacter}`}>
   <div className="stage">
-        <DebugOverlay />
+    <MenuButton onClick={toggleSidebar} />
+    <DebugOverlay />
     <main className="layout">
 
         {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
