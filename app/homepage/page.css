@@ -262,8 +262,9 @@ html {
   }
   @media (max-width: 600px) {.banner-title {
     margin-top: -50px;
-    margin-left: 135px;
-    margin-right: 80px;
+    margin-left: 20px;
+    margin-right: -40px;
+      align-items: center;
   }
   } 
 
