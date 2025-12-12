@@ -451,45 +451,6 @@
       content: url("/assets/website-gfx/redd-info-box-long.png");
     }
   }
-.homepage {
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-.homepage .stage,
-.homepage .layout {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-/* Lock the homepage stack to the viewport height */
-.homepage-container,
-.stage-wrap.homepage,
-.homepage .stage,
-.homepage .layout,
-.homepage .content-demo {
-  min-height: 100vh;  /* OK */
-  height: auto;       /* <-- LET CONTENT BREATHE */
-  overflow: visible; 
-}
-/* Hide scrollbars on homepage */
-.homepage-container,
-.stage-wrap.homepage,
-.homepage,
-.homepage .stage,
-.homepage .layout,
-.homepage .content-demo {
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE/Edge */
-}
-
-.homepage-container::-webkit-scrollbar,
-.stage-wrap.homepage::-webkit-scrollbar,
-.homepage::-webkit-scrollbar,
-.homepage .stage::-webkit-scrollbar,
-.homepage .layout::-webkit-scrollbar,
-.homepage .content-demo::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
 /*#endregion*/
 
 /* #region : "GIF Button Logic" -------------------------------------- */
