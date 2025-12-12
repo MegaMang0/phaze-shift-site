@@ -4,9 +4,11 @@
   position: relative;
   width: 100%;
   height: 100%;
+}
+body,
+html {
   overflow: hidden;
 }
-
 /* #region : "Theme Image Setup" ----------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
@@ -272,7 +274,7 @@
 /* ----------------------------------------------------------------------- */
 
   .homepage .character-art {
-    position: absolute;
+    position: fixed; /* anchor to viewport so it isn't clipped when layout shifts */
     top: 0;
     left: 0;
     right: 0;
@@ -282,6 +284,7 @@
     margin: 0;
     padding: 0;
     display: block;
+    overflow: visible;
   }
   .homepage .redd-image {
     position: absolute;
@@ -461,6 +464,16 @@
   max-width: 100%;
   overflow-x: hidden;
 }
+/* Lock the homepage stack to the viewport height */
+.homepage-container,
+.stage-wrap.homepage,
+.homepage .stage,
+.homepage .layout,
+.homepage .content-demo {
+  min-height: 100vh;  /* OK */
+  height: auto;       /* <-- LET CONTENT BREATHE */
+  overflow: visible; 
+}
 /*#endregion*/
 
 /* #region : "GIF Button Logic" -------------------------------------- */
@@ -495,3 +508,59 @@
 }
 
 /* #endregion */
+
+/* #region : "Mobile Overflow Fixes" ---------------------------------- */
+/* Prevent horizontal scroll on small viewports ----------------------- */
+
+@media (max-width: 768px) {
+  /* Override global content min-width/padding that force overflow */
+  .homepage .content {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 20px 16px 16px;
+    box-sizing: border-box;
+  }
+
+  /* Ensure the grid wrapper cannot exceed the viewport width */
+  .homepage .layout {
+    min-width: 100%;
+  }
+
+  /* Remove the banner horizontal offset on mobile */
+  .content-demo .banner-wrap {
+    left: 0;
+  }
+
+  /* Keep the hero GIF within the viewport */
+  .mainGIF {
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 65%);
+    padding: 0 12px;
+  }
+  .mainGIF img {
+    width: min(90vw, 500px);
+    height: auto;
+  }
+/* Hide scrollbars on homepage */
+.homepage-container,
+.stage-wrap.homepage,
+.homepage,
+.homepage .stage,
+.homepage .layout,
+.homepage .content-demo {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
+}
+
+.homepage-container::-webkit-scrollbar,
+.stage-wrap.homepage::-webkit-scrollbar,
+.homepage::-webkit-scrollbar,
+.homepage .stage::-webkit-scrollbar,
+.homepage .layout::-webkit-scrollbar,
+.homepage .content-demo::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+}
+
+/*#endregion*/
