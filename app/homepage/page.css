@@ -5,10 +5,7 @@
   width: 100%;
   height: 100%;
 }
-body,
-html {
-  overflow: hidden;
-}
+
 /* #region : "Theme Image Setup" ----------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
@@ -543,24 +540,17 @@ html {
     width: min(90vw, 500px);
     height: auto;
   }
-/* Hide scrollbars on homepage */
-.homepage-container,
-.stage-wrap.homepage,
-.homepage,
-.homepage .stage,
-.homepage .layout,
-.homepage .content-demo {
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE/Edge */
+.homepage-container {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden; /* hide scrollbars, allow hero art freedom */
 }
 
-.homepage-container::-webkit-scrollbar,
-.stage-wrap.homepage::-webkit-scrollbar,
-.homepage::-webkit-scrollbar,
-.homepage .stage::-webkit-scrollbar,
-.homepage .layout::-webkit-scrollbar,
-.homepage .content-demo::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+/* Stage wrap ONLY on homepage */
+.stage-wrap.homepage {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
 }
 }
 

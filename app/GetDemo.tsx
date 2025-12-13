@@ -4,6 +4,11 @@ import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
 import DebugOverlay from '@/components/DebugOverlay';
+import MenuButton from "@/components/MenuButton";
+
+  function toggleSidebar() {
+    document.body.classList.toggle("sidebar-open");
+  }
 
 // List of valid codes (unlimited use)
 const VALID_CODES = ["recruiter", "resume", "beta tester", "alex"];
@@ -59,6 +64,7 @@ export default function GetDemo() {
   return (
   <div className={`stage-wrap page-about get-demo character-${currentCharacter}`}>
     <div className="stage">
+        <MenuButton onClick={toggleSidebar} />
       <main className="layout">
             <DebugOverlay />
 

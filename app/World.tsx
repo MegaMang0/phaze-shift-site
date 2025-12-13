@@ -4,12 +4,18 @@ import GlowSelectButton from "@/components/GlowSelectButton";
 import ScrollPrompt from "@/components/ScrollPrompt";
 import { useCharacter } from "@/contexts/CharacterContext";
 import CharacterCard from "@/components/CharacterCard";
+import MenuButton from "@/components/MenuButton";
+
+  function toggleSidebar() {
+    document.body.classList.toggle("sidebar-open");
+  }
 
 export default function AboutGamePage() {
   const { currentCharacter } = useCharacter();
   return (
   <div className={`stage-wrap page-about world character-${currentCharacter}`}>
   <div className="stage">
+      <MenuButton onClick={toggleSidebar} />
     <main className="layout">
     
       {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
