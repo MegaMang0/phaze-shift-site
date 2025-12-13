@@ -51,6 +51,16 @@
       height: 320px;
     object-fit: contain;
   }
+    .mainGIF img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 560 / 320;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
+    display: block;
+  }
+
   .mainGIF .gif-caption {
     width: 100%;
     font-size: 22px;
@@ -98,8 +108,6 @@
     .mainGIF img {
       max-width: 70vw;
       border-radius: 40px;
-      width: 560px;
-      height: 320px;
     }    
   }
 
@@ -111,8 +119,6 @@
     .mainGIF img {
       max-width: 70vw;
       border-radius: 40px;
-      width: 500px;
-      height: 280px;
     }    
     .mainGIF .gif-caption {
       font-size: 18px;
@@ -122,20 +128,20 @@
 
   @media (max-width: 768px) {
     .mainGIF {
-      left: 60%;
-      transform: translate(-50%, 65%);
+      left: 50%;
+      transform: translate(-50%, 70%);
     }    
     .mainGIF img {
-      border-radius: 30px;
-      width: 500px;
-      height: 200px;
+      max-width: 90vw;
+      max-height: 90vw;
+      border-radius: 0px;
     }    
     .mainGIF .gif-caption {
       font-size: 16px;
       margin-top: 12px;
     }
   }
-
+/*
   @media (max-width: 480px) {
     .mainGIF {
       margin-top: 20px;
@@ -152,7 +158,7 @@
   .vh-stage .mainGIF {
     position: relative !important;
     z-index: 5 !important;
-  }
+  }*/
 /*#endregion*/
 
 /* #region : "Banner Visuals Setup" -------------------------------------- */
@@ -511,47 +517,62 @@
 /* Prevent horizontal scroll on small viewports ----------------------- */
 
 @media (max-width: 768px) {
-  /* Override global content min-width/padding that force overflow */
   .homepage .content {
     min-width: 100%;
     max-width: 100%;
     padding: 20px 16px 16px;
     box-sizing: border-box;
   }
-
-  /* Ensure the grid wrapper cannot exceed the viewport width */
   .homepage .layout {
     min-width: 100%;
   }
-
-  /* Remove the banner horizontal offset on mobile */
   .content-demo .banner-wrap {
     left: 0;
   }
-
-  /* Keep the hero GIF within the viewport */
+  .notification-box
+  {
+    margin-top: 55px;
+  }
+  /*
   .mainGIF {
     width: 100%;
     left: 50%;
-    transform: translate(-50%, 65%);
+    transform: translate(-50%, 75%);
     padding: 0 12px;
   }
   .mainGIF img {
     width: min(90vw, 500px);
     height: auto;
   }
-.homepage-container {
-  min-height: 100vh;
-  height: auto;
-  overflow: hidden; /* hide scrollbars, allow hero art freedom */
-}
-
-/* Stage wrap ONLY on homepage */
-.stage-wrap.homepage {
-  min-height: 100vh;
-  height: auto;
-  overflow: hidden;
-}
+    */
+  .homepage-container {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  .stage-wrap.homepage {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  body:not(.sidebar-open) .banner-title  {
+    margin-left: -35px;
+    margin-right: 60px;
+  }
+  body.sidebar-open .banner-title {
+    margin-left: 100px;
+    margin-right: 40px;
+  }
+  @media (max-width: 600px) {
+    body:not(.sidebar-open) .banner-title  {
+      margin-left: -35px;
+      margin-right: 60px;
+    }
+    body.sidebar-open .banner-title {
+      margin-left: 70px;
+      margin-right: 20px;
+    }
+  }
 }
 
 /*#endregion*/

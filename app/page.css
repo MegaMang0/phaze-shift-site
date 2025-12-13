@@ -122,10 +122,12 @@
 
   @media (max-width: 768px) {
     .mainGIF {
-      left: 60%;
+      left: 50%;
       transform: translate(-50%, 65%);
     }    
     .mainGIF img {
+      max-width: 90vw;
+      max-height: 90vh;
       border-radius: 30px;
       width: 500px;
       height: 200px;
@@ -135,7 +137,7 @@
       margin-top: 12px;
     }
   }
-
+/*
   @media (max-width: 480px) {
     .mainGIF {
       margin-top: 20px;
@@ -152,7 +154,7 @@
   .vh-stage .mainGIF {
     position: relative !important;
     z-index: 5 !important;
-  }
+  }*/
 /*#endregion*/
 
 /* #region : "Banner Visuals Setup" -------------------------------------- */
@@ -259,8 +261,9 @@
   }
   @media (max-width: 600px) {.banner-title {
     margin-top: -50px;
-    margin-left: 135px;
-    margin-right: 80px;
+    margin-left: 20px;
+    margin-right: -40px;
+      align-items: center;
   }
   } 
 
@@ -451,6 +454,26 @@
       content: url("/assets/website-gfx/redd-info-box-long.png");
     }
   }
+.homepage {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.homepage .stage,
+.homepage .layout {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Lock the homepage stack to the viewport height */
+.homepage-container,
+.stage-wrap.homepage,
+.homepage .stage,
+.homepage .layout,
+.homepage .content-demo {
+  min-height: 100vh;  /* OK */
+  height: auto;       /* <-- LET CONTENT BREATHE */
+  overflow: visible; 
+}
 /*#endregion*/
 
 /* #region : "GIF Button Logic" -------------------------------------- */
@@ -490,34 +513,57 @@
 /* Prevent horizontal scroll on small viewports ----------------------- */
 
 @media (max-width: 768px) {
-  /* Override global content min-width/padding that force overflow */
   .homepage .content {
     min-width: 100%;
     max-width: 100%;
     padding: 20px 16px 16px;
     box-sizing: border-box;
   }
-
-  /* Ensure the grid wrapper cannot exceed the viewport width */
   .homepage .layout {
     min-width: 100%;
   }
-
-  /* Remove the banner horizontal offset on mobile */
   .content-demo .banner-wrap {
     left: 0;
   }
-
-  /* Keep the hero GIF within the viewport */
+  /*
   .mainGIF {
     width: 100%;
     left: 50%;
-    transform: translate(-50%, 65%);
+    transform: translate(-50%, 75%);
     padding: 0 12px;
   }
   .mainGIF img {
     width: min(90vw, 500px);
     height: auto;
+  }
+    */
+  .homepage-container {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  .stage-wrap.homepage {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  body:not(.sidebar-open) .banner-title  {
+    margin-left: -35px;
+    margin-right: 60px;
+  }
+  body.sidebar-open .banner-title {
+    margin-left: 100px;
+    margin-right: 40px;
+  }
+  @media (max-width: 600px) {
+    body:not(.sidebar-open) .banner-title  {
+      margin-left: -35px;
+      margin-right: 60px;
+    }
+    body.sidebar-open .banner-title {
+      margin-left: 70px;
+      margin-right: 20px;
+    }
   }
 }
 

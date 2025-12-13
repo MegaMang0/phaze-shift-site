@@ -31,6 +31,10 @@ export default function Protagonists() {
     <div className="character-badge-container">
       <CharacterBadge spinSpeed={10}/>
     </div>
+        
+    <aside className="page-fade">
+      <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
+    </aside>
     
     {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
     <main className="layout">
@@ -73,12 +77,6 @@ export default function Protagonists() {
               useCharacterTheme={true}
             />
           </div>
-        </aside>
-      
-        {/*-------------------------- PAGE ACCENTS --------------------------*/} 
-
-        <aside className="page-fade">
-          <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
         </aside>
 
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}

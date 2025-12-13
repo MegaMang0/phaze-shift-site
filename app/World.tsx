@@ -15,10 +15,30 @@ export default function AboutGamePage() {
   return (
   <div className={`stage-wrap page-about world character-${currentCharacter}`}>
   <div className="stage">
-      <MenuButton onClick={toggleSidebar} />
-    <main className="layout">
+        
+        {/* ------------------- Fixed On Screen Elements ------------------- */}
     
+        <MenuButton onClick={toggleSidebar} />    
+        <ScrollPrompt/>
+        
+        <aside className="corner-banner">
+          <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
+        </aside>
+        <aside className="title-banner">
+          <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
+        </aside>
+            
+        <div className="character-badge-container">
+          <CharacterBadge spinSpeed={10}/>
+        </div>
+        
+        <aside className="page-fade">
+          <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
+        </aside>
+  
       {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+  
+      <main className="layout">
         <aside className="sidebar art">
           <div className="sidebar-bg" aria-hidden />
             <div className="sidebar-content">
@@ -61,25 +81,7 @@ export default function AboutGamePage() {
             </div>
           </aside>
       
-        {/*-------------------------- PAGE ACCENTS --------------------------*/} 
-          <div className="character-badge-container">
-            <CharacterBadge spinSpeed={10}/>
-          </div>
-
-          <aside className="corner-banner">
-            <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
-          </aside>
       
-          <aside className="title-banner">
-            <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
-          </aside>
-      
-          <aside className="page-fade">
-            <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
-          </aside>
-      
-          <ScrollPrompt/>
-
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
                 
           <section className="content">

@@ -1221,7 +1221,7 @@ body {
   }
   
   :root {
-  --sidebar-mobile-w: 100px;
+  --sidebar-mobile-w: 120px;
 }
 
 /* MOBILE MODE */
@@ -1232,16 +1232,27 @@ body {
   body:not(.sidebar-open) .sidebar {
     transform: translateX(calc(-1 * var(--sidebar-mobile-w)));
   }
-
   body.sidebar-collapsed .layout,
   body:not(.sidebar-open) .layout {
     transform: translateX(calc(-1 * var(--sidebar-mobile-w)));
+  }
+  body:not(.sidebar-open) .character-badge-container .character-badge {
+    margin-left: -150px;
+  }
+  body:not(.sidebar-open) .notification-box {
+    left: -200px;
   }
 
   /* Sidebar open */
   body.sidebar-open .sidebar,
   body.sidebar-open .layout {
     transform: translateX(0);
+  }
+  body.sidebar-open  .character-badge-container .character-badge {
+    margin-left: 0px;
+  }
+  body.sidebar-open .notification-box{
+    margin-left: 10px;
   }
 
   .sidebar,
@@ -1526,3 +1537,16 @@ body {
 }
 
 /*#endregion*/
+
+/* Homepage-specific override: keep layout fixed when toggling mobile sidebar */
+@media (max-width: 768px) {
+  /* Slide sidebar farther off-screen on homepage */
+  .homepage { --sidebar-mobile-w: 200px; }
+
+  .homepage .layout,
+  body.sidebar-open .homepage .layout,
+  body.sidebar-collapsed .homepage .layout,
+  body:not(.sidebar-open) .homepage .layout {
+    transform: none !important;
+  }
+}

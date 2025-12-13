@@ -14,11 +14,20 @@ export default function HomePage() {
   <div className="homepage-container">
     <div className={`stage-wrap homepage character-${currentCharacter}`}>
       <div className="stage">
-              <MenuButton onClick={toggleSidebar} />
+    
+    {/* ------------------- Fixed On Screen Elements ------------------- */}
+      <MenuButton onClick={toggleSidebar} />
               
-        <main className="layout">
+      <div className="character-badge-container">
+        <CharacterBadge spinSpeed={10}/>
+      </div>
         
-          {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+      <aside className="page-fade">
+        <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
+      </aside>
+        
+    {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+        <main className="layout">
           <aside className="sidebar art">
             <div className="sidebar-bg" aria-hidden />
               <div className="sidebar-content">
@@ -42,12 +51,8 @@ export default function HomePage() {
               </div>
             </aside>
       
-              {/*-------------------------- SIDEBAR GRAPHICS --------------------------*/}          
+            {/*-------------------------- SIDEBAR GRAPHICS --------------------------*/}          
             
-              <div className="character-badge-container">
-                <CharacterBadge spinSpeed={10}/>
-              </div>
-
               <div className="notification-box">
                 <img src= { currentCharacter === 'redd' 
                         ? "/assets/website-gfx/redd-info-box.png"
@@ -55,14 +60,9 @@ export default function HomePage() {
                     alt="Info Box" 
                     className="info-box-image"
                 />
-              </div>
-              
+              </div>              
               
             {/*-------------------------- PAGE ACCENTS --------------------------*/}
-
-              <aside className="page-fade">
-                <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
-              </aside>
               
               <section className="content content-demo">
 
@@ -77,13 +77,6 @@ export default function HomePage() {
 
             {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
             
-                <div className="get-demo-notif">
-                </div>
-                
-                  <div className="code-input-container">
-                  
-                </div>
-
                 <div className="character-art">
                   <div className="aqua-image">
                     <img src="/assets/character-art/aqua-full-svg.png" />
@@ -103,6 +96,7 @@ export default function HomePage() {
                     &gt; &gt; Click For More! &lt; &lt;
                   </div>
                 </div>
+                
               </section>
             </main>
           </div>

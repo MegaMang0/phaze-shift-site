@@ -3,7 +3,6 @@ import { useState } from "react";
 import CharacterBadge from "@/components/CharacterBadge";
 import GlowSelectButton from "@/components/GlowSelectButton";
 import { useCharacter } from "@/contexts/CharacterContext";
-import DebugOverlay from '@/components/DebugOverlay';
 import MenuButton from "@/components/MenuButton";
 
   function toggleSidebar() {
@@ -64,11 +63,29 @@ export default function GetDemo() {
   return (
   <div className={`stage-wrap page-about get-demo character-${currentCharacter}`}>
     <div className="stage">
-        <MenuButton onClick={toggleSidebar} />
-      <main className="layout">
-            <DebugOverlay />
-
+          
+          {/* ------------------- Fixed On Screen Elements ------------------- */}
+      
+          <MenuButton onClick={toggleSidebar} />    
+          
+          <aside className="corner-banner">
+            <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
+          </aside>
+          <aside className="title-banner">
+            <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
+          </aside>
+              
+          <div className="character-badge-container">
+            <CharacterBadge spinSpeed={10}/>
+          </div>
+        
+          <aside className="page-fade">
+            <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
+          </aside>
+    
         {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+    
+        <main className="layout">
         <aside className="sidebar art">
           <div className="sidebar-bg" aria-hidden />
             <div className="sidebar-content">
@@ -115,24 +132,8 @@ export default function GetDemo() {
             <CharacterBadge spinSpeed={10}/>
           </div>
           
-        {/*-------------------------- PAGE ACCENTS --------------------------*/}
-
-          <aside className="page-fade">
-            <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
-          </aside>
-          
-          <section className="content content-get-demo">
-
-            <div className="banner-wrap-demo">
-              <div className="banner-graphic-demo">
-                <img src="/assets/website-gfx/dual-line.png"/>
-              </div>
-              <div className="banner-title-demo">
-                <img src="/assets/website-gfx/phaze-shift-title.png"/>
-              </div>
-            </div>
-
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
+          <section className="content content-get-demo">
         
             <div className="get-demo-notif">
               <div className={`redd-chibi ${isInvalid ? "shake" : ""}`}>
