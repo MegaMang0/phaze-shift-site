@@ -15,10 +15,25 @@ export default function Protagonists() {
   return (
   <div className={`stage-wrap page-about protagonists character-${currentCharacter}`}>
   <div className="stage">
-    <MenuButton onClick={toggleSidebar} />
-    <main className="layout">
     
-      {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+    {/* ------------------- Fixed On Screen Elements ------------------- */}
+
+    <MenuButton onClick={toggleSidebar} />    
+    <ScrollPrompt/>
+    
+    <aside className="corner-banner">
+      <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
+    </aside>
+    <aside className="title-banner">
+      <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
+    </aside>
+        
+    <div className="character-badge-container">
+      <CharacterBadge spinSpeed={10}/>
+    </div>
+    
+    {/* ------------------- SIDEBAR + BUTTONS ------------------- */}
+    <main className="layout">
       <aside className="sidebar art">
         <div className="sidebar-bg" aria-hidden />
           <div className="sidebar-content">
@@ -62,23 +77,9 @@ export default function Protagonists() {
       
         {/*-------------------------- PAGE ACCENTS --------------------------*/} 
 
-        <div className="character-badge-container">
-          <CharacterBadge spinSpeed={10}/>
-        </div>
-        
-        <aside className="corner-banner">
-          <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
-        </aside>
-        
-        <aside className="title-banner">
-          <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
-        </aside>
-        
         <aside className="page-fade">
           <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
         </aside>
-        
-        <ScrollPrompt/>
 
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
         <section className="content">
