@@ -179,7 +179,7 @@
   }
   @media (max-width: 768px) {
     .about-creator .side-stack {
-      margin-right: 140px;
+      margin-right: 70px;
     }
   }
 /* Dedicated sizing for creator extras image to avoid other page bleed */
