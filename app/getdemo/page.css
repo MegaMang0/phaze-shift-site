@@ -63,8 +63,14 @@
 /* #region : "Banner Visuals Setup" -------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
-
-  
+  .content-demo {
+    padding-left: 0; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }  
   .banner-wrap {
     position: relative;
     display: flex;
@@ -625,6 +631,15 @@
    LOCK GET DEMO PAGE ON MOBILE
    =============================== */
 
+  .homepage-container,
+  .stage-wrap.page-about.get-demo,
+  .page-about.get-demo .stage,
+  .page-about.get-demo .layout,
+  .page-about.get-demo .content-demo {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible; 
+  }
   .page-about.get-demo,
   .page-about.get-demo .stage,
   .page-about.get-demo .layout,
@@ -688,7 +703,7 @@
   }
   @media (max-width: 600px) {
     body:not(.sidebar-open) .banner-title  {
-      margin-left: -65px;
+      margin-left: -35px;
       margin-right: 60px;
     }
     body.sidebar-open .banner-title {

@@ -61,6 +61,7 @@ export default function GetDemo() {
   };
 
   return (
+  <div className="homepage-container">
   <div className={`stage-wrap page-about get-demo character-${currentCharacter}`}>
     <div className="stage">
           
@@ -125,10 +126,6 @@ export default function GetDemo() {
           </div>
           
         {/*-------------------------- PAGE ACCENTS --------------------------*/}
-
-          <aside className="page-fade">
-            <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
-          </aside>
           
               <section className="content content-demo">
 
@@ -195,6 +192,7 @@ export default function GetDemo() {
           </section>
         </main>
         </div>
+    </div>
     </div>
   );
 }

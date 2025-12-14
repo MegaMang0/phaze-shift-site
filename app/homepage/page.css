@@ -78,14 +78,6 @@
     max-width: 80vw;
     z-index: 60;
   }
-  .content-demo {
-    padding-left: 0; 
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
   .banner-wrap {
     position: relative;
     display: flex;
@@ -146,6 +138,14 @@
 /* #region : "Banner Visuals Setup" -------------------------------------- */
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
+  .content-demo {
+    padding-left: 0; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
   banner-wrap {
     position: absolute;
     left: 50%;
