@@ -37,7 +37,7 @@
     right: 100;
     position: absolute;
     left: 50%;
-      transform: translate(-50%, 80%);
+    transform: translate(-50%, 80%);
   }
   .mainGIF img {
     transform-origin: center;
@@ -141,24 +141,6 @@
       margin-top: 12px;
     }
   }
-/*
-  @media (max-width: 480px) {
-    .mainGIF {
-      margin-top: 20px;
-    }    
-    .mainGIF img {
-      max-width: 60vw;
-      border-radius: 20px;
-    }    
-    .mainGIF .gif-caption {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-  }
-  .vh-stage .mainGIF {
-    position: relative !important;
-    z-index: 5 !important;
-  }*/
 /*#endregion*/
 
 /* #region : "Banner Visuals Setup" -------------------------------------- */
@@ -533,18 +515,6 @@
   {
     margin-top: 55px;
   }
-  /*
-  .mainGIF {
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, 75%);
-    padding: 0 12px;
-  }
-  .mainGIF img {
-    width: min(90vw, 500px);
-    height: auto;
-  }
-    */
   .homepage-container {
     min-height: 100vh;
     height: auto;

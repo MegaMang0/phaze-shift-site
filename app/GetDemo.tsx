@@ -67,14 +67,6 @@ export default function GetDemo() {
           {/* ------------------- Fixed On Screen Elements ------------------- */}
       
           <MenuButton onClick={toggleSidebar} />    
-          
-          <aside className="corner-banner">
-            <img src="/assets/website-gfx/dual-line.png" alt="Banner" />
-          </aside>
-          <aside className="title-banner">
-            <img src="/assets/website-gfx/phaze-shift-title.png" alt="Title" />
-          </aside>
-              
           <div className="character-badge-container">
             <CharacterBadge spinSpeed={10}/>
           </div>
@@ -132,9 +124,26 @@ export default function GetDemo() {
             <CharacterBadge spinSpeed={10}/>
           </div>
           
+        {/*-------------------------- PAGE ACCENTS --------------------------*/}
+
+          <aside className="page-fade">
+            <img src="/assets/website-gfx/page-fade.png" alt="PageFade" />
+          </aside>
+          
+              <section className="content content-demo">
+
+                <div className="banner-wrap">
+                  <div className="banner-graphic">
+                    <img src="/assets/website-gfx/dual-line.png"/>
+                  </div>
+                  <div className="banner-title">
+                    <img src="/assets/website-gfx/phaze-shift-title.png"/>
+                  </div>
+                </div>
+
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
-          <section className="content content-get-demo">
         
+          <div className="demo-code-wrap">
             <div className="get-demo-notif">
               <div className={`redd-chibi ${isInvalid ? "shake" : ""}`}>
                 <img src="/assets/character-art/redd-chibi.png"/>
@@ -167,8 +176,8 @@ export default function GetDemo() {
                   {error}
                 </div>
               )}
-              
             </div>
+          </div>
 
             <div className="character-art">
               <div className="redd-image">
