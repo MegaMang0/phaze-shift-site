@@ -1406,6 +1406,10 @@ body {
   .content-with-card.reverse-layout .text-content,
   .content-with-image.reverse-layout .text-content            { order: 1; }
 
+  /* About Creator: ensure side-stack media shows first on narrow screens */
+  .about-creator .content-with-card.reverse-layout .side-stack { order: -1; }
+  .about-creator .content-with-card.reverse-layout .text-content { order: 1; }
+
   .character-badge-container { transform: none !important; }
   .character-badge-container .character-badge {
     border-radius: 50% !important;
@@ -1491,6 +1495,16 @@ body {
     width: clamp(300px, 80vw, 500px);
     height: auto;
     margin: 20px auto;
+  }
+
+  /* Ensure reverse layouts show media first on narrow screens */
+  .content-with-image.reverse-layout .features-gif,
+  .content-with-card.reverse-layout .character-card-container {
+    order: -1;
+  }
+  .content-with-image.reverse-layout p,
+  .content-with-card.reverse-layout .text-content {
+    order: 1;
   }
   .corner-banner {
     position: fixed;

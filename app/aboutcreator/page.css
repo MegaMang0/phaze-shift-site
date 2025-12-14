@@ -177,6 +177,11 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  @media (max-width: 768px) {
+    .about-creator .side-stack {
+      margin-right: 140px;
+    }
+  }
 /* Dedicated sizing for creator extras image to avoid other page bleed */
 .about-creator .creator-extras img {
   width: 35%;
