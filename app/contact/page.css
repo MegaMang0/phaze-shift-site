@@ -267,15 +267,10 @@
 
   @media (max-width: 768px) {
     .enemy-artwork {
-      transform: scale(0.35);
-      right: -20px;
-      top: 300px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .enemy-artwork {
-      transform: scale(0.25);
+      transform: scale(0.35) translate(-0%, -50%);
+      right: 0px;
+      top: 0px;
+      transform-origin: bottom right;
     }
   }
 
