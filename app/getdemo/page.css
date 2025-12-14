@@ -644,8 +644,9 @@
   .page-about.get-demo .layout,
   .page-about.get-demo .content-get-demo,
   .page-about.get-demo .stage-wrap {
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     position: relative;
+    height: 100vh;
   }
 
   @media (max-width: 768px) {
@@ -665,6 +666,16 @@
 /* #region : "Mobile Overflow Fixes" ---------------------------------- */
 /* Prevent horizontal scroll on small viewports ----------------------- */
 
+  .homepage-container{
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  .stage-wrap.homepage{
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
 @media (max-width: 768px) {
   .page-about.get-demo .content {
     min-width: 100%;
@@ -681,18 +692,6 @@
   .notification-box
   {
     margin-top: 55px;
-  }
-  .homepage-container,
-  .stage-wrap.page-about.get-demo {
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
-  }
-  .stage-wrap.homepage,
-  .page-about.get-demo .stage {
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
   }
   body:not(.sidebar-open) .banner-title  {
     margin-left: -35px;

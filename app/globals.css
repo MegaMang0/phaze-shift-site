@@ -198,7 +198,7 @@
   position: fixed;
   bottom: 4vh; /* Match sidebar .sidebar-content padding */
   left: 2vh;
-  z-index: 1000;
+  z-index: 5000; /* keep above sidebar/content so it never hides on desktop */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1268,6 +1268,13 @@ body {
   .layout {
     transform: none !important;
   }
+
+  /* Keep the badge anchored on desktop */
+  .character-badge-container {
+    transform: none !important;
+    margin-left: 0 !important;
+    left: 2vh;
+  }
 }
 
 }
@@ -1538,18 +1545,33 @@ body {
 
 /*#endregion*/
 
-/* Homepage-specific override: keep layout fixed when toggling mobile sidebar */
-
 @media (max-width: 768px) {
 
   /* Slide sidebar farther off-screen on homepage */
   .homepage,
-  .page-about.get-demo { --sidebar-mobile-w: 200px; }
+  .page-about.get-demo,
+  .page-about.contact { --sidebar-mobile-w: 200px; }
 
-  .homepage .layout,
+  .homepage .layout, .page-about.get-demo layout, .page-about.contact layout,
+  body.sidebar-open .homepage .layout,
   body.sidebar-open .homepage .layout,
   body.sidebar-collapsed .homepage .layout,
   body:not(.sidebar-open) .homepage .layout {
     transform: none !important;
+  }
+
+  /* Move the floating character badge with the sidebar toggle */
+  .character-badge-container {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  body.sidebar-collapsed .character-badge-container,
+  body:not(.sidebar-open) .character-badge-container {
+    transform: translateX(calc(-1 * var(--sidebar-mobile-w, 100px)));
+  }
+
+  body.sidebar-open .character-badge-container {
+    transform: translateX(0);
   }
 }

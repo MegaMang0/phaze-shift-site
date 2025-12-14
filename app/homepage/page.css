@@ -432,11 +432,11 @@
   }
 
   @media (max-width: 768px) {
-    .character-aqua .info-box-image {
+    .homepage.character-aqua .info-box-image {
       content: url("/assets/website-gfx/aqua-info-box-long.png");
     }
     
-    .character-redd .info-box-image {
+    .homepage.character-redd .info-box-image {
       content: url("/assets/website-gfx/redd-info-box-long.png");
     }
   }
@@ -498,6 +498,17 @@
 /* #region : "Mobile Overflow Fixes" ---------------------------------- */
 /* Prevent horizontal scroll on small viewports ----------------------- */
 
+.homepage-container {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+}
+.stage-wrap.homepage {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .homepage .content {
     min-width: 100%;
@@ -514,16 +525,6 @@
   .notification-box
   {
     margin-top: 55px;
-  }
-  .homepage-container {
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
-  }
-  .stage-wrap.homepage {
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
   }
   body:not(.sidebar-open) .banner-title  {
     margin-left: -35px;

@@ -127,16 +127,17 @@ export default function GetDemo() {
           
         {/*-------------------------- PAGE ACCENTS --------------------------*/}
           
-              <section className="content content-demo">
+        <section className="content content-demo">
 
-                <div className="banner-wrap">
-                  <div className="banner-graphic">
-                    <img src="/assets/website-gfx/dual-line.png"/>
-                  </div>
-                  <div className="banner-title">
-                    <img src="/assets/website-gfx/phaze-shift-title.png"/>
-                  </div>
-                </div>
+          <div className="banner-wrap">
+            <div className="banner-graphic">
+              <img src="/assets/website-gfx/dual-line.png"/>
+            </div>
+            
+            <div className="banner-title">
+              <img src="/assets/website-gfx/phaze-shift-title.png"/>
+            </div>
+          </div>
 
         {/*-------------------------- PAGE SPECIFIC CONTENT --------------------------*/}
         
