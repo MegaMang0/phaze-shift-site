@@ -630,7 +630,6 @@
     /* ===============================
    LOCK GET DEMO PAGE ON MOBILE
    =============================== */
-
   .homepage-container,
   .stage-wrap.page-about.get-demo,
   .page-about.get-demo .stage,
@@ -667,13 +666,13 @@
 /* Prevent horizontal scroll on small viewports ----------------------- */
 
 @media (max-width: 768px) {
-  .homepage .content {
+  .page-about.get-demo .content {
     min-width: 100%;
     max-width: 100%;
     padding: 20px 16px 16px;
     box-sizing: border-box;
   }
-  .homepage .layout {
+  .page-about.get-demo .layout {
     min-width: 100%;
   }
   .content-demo .banner-wrap {
@@ -683,12 +682,14 @@
   {
     margin-top: 55px;
   }
-  .homepage-container {
+  .homepage-container,
+  .stage-wrap.page-about.get-demo {
     min-height: 100vh;
     height: auto;
     overflow: hidden;
   }
-  .stage-wrap.homepage {
+  .stage-wrap.homepage,
+  .page-about.get-demo .stage {
     min-height: 100vh;
     height: auto;
     overflow: hidden;
