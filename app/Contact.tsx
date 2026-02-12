@@ -94,7 +94,7 @@ export default function Contact() {
               <div className="text-inside">
                 <h1>Contact Info</h1>
 
-                <div className="dash-line">-----------------------</div>
+                <div className="dash-line">---------------------</div>
 
                 <div className="email">
                   <p>E-mail: lord_mango@outlook.com</p>

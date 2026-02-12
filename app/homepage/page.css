@@ -360,10 +360,18 @@
   @media (max-width: 480px) {
     .homepage .redd-image {
       right: 10px;
+      top: 480px;
     }     
+    .homepage .redd-image img {
+      height: 440px;
+    }    
     .homepage .aqua-image {
       right: -30px;
+      top: 330px;
     }    
+    .homepage .aqua-image img {
+      height: 420px;
+    }
   }
 /*#endregion*/
 
