@@ -86,7 +86,14 @@ export default function AboutCreator() {
             <section className="content">
               <div className="character-space"></div>
                 
-                <div className="content-with-card reverse-layout">
+                <div className="content-with-card">
+
+                    <CharacterCard
+                      characterName="Danny"
+                      characterImage="/assets/character-art/danny-edit.png"
+                      namePosition={65} // Adjust horizontal position
+                      idlePosition={{ top: "54%", left: "67%", width: "76%" }}
+                    />                      
                     
                     <div className="text-content">
                       <p className="intro-paragraph">
@@ -105,15 +112,6 @@ export default function AboutCreator() {
                         Below is my development process, showcasing everything I've taught myself. Though I started as an artist, I've developed strong programming and technical skills to bridge art and engineering.
                         From the beginning, I knew Phaze Shift would feature hand-drawn art with a 2.5D aesthetic. I wanted to 3D model the characters while maintaining a 2D look. Here's how I achieved that:
                       </p>
-                    </div>
-
-                    <div className="side-stack">
-                     <CharacterCard
-                      characterName="Danny"
-                      characterImage="/assets/character-art/danny-edit.png"
-                      namePosition={65} // Adjust horizontal position
-                      idlePosition={{ top: "54%", left: "67%", width: "76%" }}
-                      />                      
                     </div>
                   
                 </div>
