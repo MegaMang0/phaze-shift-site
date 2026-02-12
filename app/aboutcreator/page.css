@@ -123,7 +123,7 @@
   .about-creator .content-with-image {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 0px;
@@ -138,6 +138,15 @@
     text-align: left; 
     letter-spacing: 0.1em; 
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  }
+
+  /* Style for the GIF container */
+  .content-with-image .features-gif,
+  .content-with-image.reverse-layout .features-gif {
+    width: 100%;
+    min-width: 400px; /* Prevent shrinking */
+    max-width: 1000px; /* Control maximum size */
+    margin: 0 auto;
   }
 /*#endregion*/
 

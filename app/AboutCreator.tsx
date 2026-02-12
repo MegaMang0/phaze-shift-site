@@ -90,25 +90,20 @@ export default function AboutCreator() {
                     
                     <div className="text-content">
                       <p className="intro-paragraph">
-                        It is I, Daniel Obregon... The sole creator of Phaze Shift! Welcome! All of the 
-                        art in the game, code, level design, are done by me alone. Including this custom 
-                        website!
-                      </p>
-                      
-                  <div className="side-stack-extras creator-extras">
-                    <img src={"assets/character-art/danny-small.png"}></img>
-                  </div>
-                      
-                      <p className="intro-paragraph">
-                        I taught myself how to code in C#, how to 3D model and how to animate in both 3D 
-                        and 2D--all to be able to make this dream of mine a reality. This is my first 
-                        project ever, and I do it all during my free time.
+                       I'm Danny-O! The sole developer of "Phaze Shift", a high-fidelity 2D action platformer. 
+                       I am a multi-disciplinary Technical Artist, Gameplay Programmer, and UI Engineer seeking remote
+                       opportunities where I can leverage my full-stack development expertise and C# proficiency.
+                       I am completely bilingual (English/Spanish) and can enable seamless communication across diverse teams. 
                       </p>
                       
                       <p className="intro-paragraph">
-                        It's a slow grind, but after two and a half years of learning how to do everything 
-                        by myself and actually implementing it (just one day a week mostly),  I have a full, 
-                        playable demo with about two hours of solid gameplay.
+                        A two-hour playable demo is available via private link/download code and has been published to
+                        Steam (currently set to private until the marketing campaign begins).
+                      </p>
+                      
+                      <p className="intro-paragraph">
+                        Below is my development process, showcasing everything I've taught myself. Though I started as an artist, I've developed strong programming and technical skills to bridge art and engineering.
+                        From the beginning, I knew Phaze Shift would feature hand-drawn art with a 2.5D aesthetic. I wanted to 3D model the characters while maintaining a 2D look. Here's how I achieved that:
                       </p>
                     </div>
 
@@ -124,86 +119,215 @@ export default function AboutCreator() {
                 </div>
               
               {/* CONTENT WITH GIFS LAYOUT */}
+              {/*-------------------------- First Section --------------------------*/}
               <div className="subheading">
-                <p>What can I do?</p>
+                <p>Character Development Pipeline</p>
               </div>
 
               <div className="content-with-image reverse-layout"> 
-                
                 <p>
-                  Well, I’m not a character in the game, that’s for sure. But while making this game, 
-                  I have become proficient in C# and familiar with CSS and TSX. There’s a lot of code
-                  that goes into making a game... like, a LOT. 
-                </p>
-                
+                  From concept, I bring each character to life with high-quality portrait art, 
+                  then move into Blender to sculpt, retopologize, and weight paint, ensuring the 
+                  face has clean topology for animation. I use shape keys and inverse kinematics 
+                  rigging to animate characters properly. 
+                </p>  
+
                 <div className="features-gif">
-                  <img src={"assets/gifs/coding-flow.gif"}></img>
-                </div>
-              
+                  <img src={"assets/gifs/wipgif1.gif"}></img>
+                </div>              
               </div>
 
               <div className="content-with-image">
-                <p>We are talking thousands upon thousands of lines, hundreds of files and they got to
-                  be neat, organized and easy to read. I’ve learned how to make complex enemy and UI
-                  “state-machines”, read/write systems for saving player progress and more. You can
-                  actually see a sample of my code, by clicking here.
-              </p>
-              </div>
-              
-              <div className="content-with-image">
                 
                 <div className="features-gif">
-                  <img src={"assets/gifs/art-atlas.gif"}></img>
+                  <img src={"assets/gifs/wipgif2.gif"}></img>
                 </div>
-                
                 <p>
-                  I’ve always enjoyed art, but I have learned to leverage my art skills into making
-                  clean, consistent UI, that's easy to read and navigate,  art assets for enemies,
-                  for the world, and overall level design.
-                </p>
-              
-              </div>
-              
-              <div className="content-with-image">
-                <p>
-                  Writing convincing dialogue is something that is difficult for many, but my game
-                  has a script that blends natural humor, believable language, personalities and a
-                  sincere taste for adventure. So far, there are hundreds of lines of dialogue,
-                  (most of which is actually optional), with branching dialogue options and specific
-                  requirements for alternate or secret dialogue.
-                </p>
-              </div>
-              
-              <div className="content-with-image reverse-layout">
-              
-                <p>
-                  I also learned how to 3D model using Blender! Certain assets in my game are 3D 
-                  modeled first then animated. Their animations are then turned to sprites, and 
-                  then given some polish and style to make them fit within the rest of the game 
-                  world’s aesthetic.
-                </p>
-                
-                <div className="features-gif">
-                  <img src={"assets/gifs/blender-modeling.gif"}></img>
-                </div>
-              
-              </div>
-              
-              <div className="content-with-image">
-                
-                <div className="features-gif">
-                  <img src={"assets/gifs/level-design.gif"}></img>
-                </div>
-                
-                <p>
-                  But all of this is still not enough! I had to learn “game-feel” what makes things 
-                  satisfying to use, satisfying to click, satisfying to explore. What can keep people 
-                  playing! If you have a code for the demo, feel free to try it for yourself!
+                  To create the illusion of 2D, I developed a custom shader combined with vertex 
+                  painting to give the models a hand-drawn appearance.
                 </p>
               
               </div>
 
-            <div className="character-space" style={{ height: '100px' }}></div>
+              {/*-------------------------- Second Section --------------------------*/}
+              <div className="subheading">
+                <p>Animation + Technical Art</p>
+              </div>
+
+              <div className="content-with-image reverse-layout"> 
+                <p>
+                  I animated both main characters without their hair and capes, rendering each frame into sprite sheets. 
+                  I then drew over these sprite sheets by hand, adding hair, capes, and traditional animation techniques 
+                  like speed lines and squash-and-stretch to enhance the hand-drawn aesthetic. 
+                </p>  
+
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif3.gif"}></img>
+                </div>              
+              </div>
+
+              <div className="content-with-image">
+                
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif4.gif"}></img>
+                </div>
+                <p>
+                  After importing into Unity, I animate characters "on twos" for fluid movements like running and walking, 
+                  and I use anticipation, smear and impact frames for snappier action animations. There are over 200+ unique animations 
+                  per character (400+ total), and at least 1,500+ individual sprites for each.
+                </p>
+              
+              </div>
+
+              {/*-------------------------- Third Section --------------------------*/}
+              <div className="subheading">
+                <p>Programming + Systems</p>
+              </div>
+
+              <div className="content-with-image reverse-layout"> 
+                <p>
+                  I built a character controller in C# with tunable variables for move speed, dash speed, coyote time, and more, 
+                  ensuring controls feel responsive while accounting for player input errors. I invested significant iteration time 
+                  on "movement feel" to ensure players enjoy simply moving the character around the world.
+                </p>  
+
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif5.gif"}></img>
+                </div>              
+              </div>
+
+              <div className="content-with-image">
+                
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif6.gif"}></img>
+                </div>
+                <p>
+                  I created a complex, modular state machine architecture to handle character behaviors, with 30+ substates 
+                  (falling, jumping, sliding, injured, etc. and more on the way) and clean transition logic. This architecture ensures scalable, 
+                  maintainable logic with robust transition handling, and was successfully adapted for smaller-scale state 
+                  machines managing unique enemy and boss behaviors.
+                </p>
+              
+              </div>
+            
+              {/*-------------------------- Fourth Section --------------------------*/}
+              <div className="subheading">
+                <p>Level Design + Environment</p>
+              </div>
+
+              <div className="content-with-image reverse-layout"> 
+                <p>
+                  Once movement and character-switching mechanics felt right, I designed the game world using a library of 
+                  500+ modular environment assets across 4 distinct locales (with more in development). 
+                  These pieces work like building blocks, allowing flexible level construction. 
+                </p>  
+
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif7.gif"}></img>
+                </div>              
+              </div>
+
+              <div className="content-with-image">
+                
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif8.gif"}></img>
+                </div>
+                <p>
+                  I developed custom shader graphs for environmental effects like foliage sway and charge blast distortions. 
+                  All enemies and environments are hand-drawn. I incorporated light 3D elements alongside 2D sprites with 
+                  parallax effects to create a unique 2.5d “diorama” type look for the environment. 
+                </p>
+              
+              </div>
+
+              {/*-------------------------- Fifth Section --------------------------*/}
+              <div className="subheading">
+                <p>UI/UX Design</p>
+              </div>
+
+              <div className="content-with-image reverse-layout"> 
+                <p>
+                  I designed a clean, readable UI that draws immediate attention to the map and active character. 
+                  The pause menu features distinct color themes for each character, with frame-by-frame animated 
+                  character reactions that respond to the player's menu selections, adding personality and polish to the interface.
+                </p>  
+
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif10.gif"}></img>
+                </div>              
+              </div>
+
+              <div className="content-with-image">
+                
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif9.gif"}></img>
+                </div>
+                <p>
+                  The UI is consistent across shops and NPCs, but I made sure to give the NPCs their own color schemes and flair.
+                  I took care to make the main menu of the game unique, yet still carry the same overall theme. The save slots 
+                  display relevant data and have unique images that showcase a preview of the last area the player saved in.
+                </p>
+              
+              </div>
+
+              {/*-------------------------- Sixth Section --------------------------*/}
+              <div className="subheading">
+                <p>Game Systems</p>
+              </div>
+
+              <div className="content-with-image reverse-layout"> 
+                <p>
+                  The game features a customizable upgrade system where players install modifications into their "chassis." 
+                  From stat boosts to new abilities, upgrades can be equipped and fused together to create unique power
+                  combinations. The demo includes 12 optional upgrades to discover.
+                </p>  
+
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif11.gif"}></img>
+                </div>              
+              </div>
+
+              <div className="content-with-image">
+                
+                <div className="features-gif">
+                  <img src={"assets/gifs/wipgif12.gif"}></img>
+                </div>
+                <p>
+                  I implemented a dynamic, context-aware dialogue system with 80+ branching nodes that track player progression, 
+                  sequence breaks, equipped upgrades, and the order in which characters are encountered. 
+                  Dialogue adapts intelligently to how each player experiences the game.
+                </p>
+              
+              </div>
+
+              <div className="character-space" style={{ height: '50px' }}></div>
+
+              <div className="content-with-image">               
+                <p>
+                  Additional systems featured in the demo include: a complete save file manager (create/copy/delete functionality), 
+                  a dynamic map that fills as players explore, sequence break paths allowing players to skip bosses or 
+                  entire areas, 3 unique boss encounters, 2 challenge rooms and a weapon-switching mechanic.
+                </p>
+              </div>
+
+              {/*-------------------------- Seventh Section --------------------------*/}
+              <div className="content-container">
+                <div className="subheading">
+                  <p>Tools & Technologies</p>
+                </div>
+
+                <div className="text-content">
+                    <p>Game Engine: Unity (C#) </p>
+                    <p>2D Art: Photoshop, Krita, Procreate, GIMP (portrait art, concept art, sprite work)</p>
+                    <p>3D Art: Blender (sculpting, rendering, sprite work)</p>
+                    <p>Design: Figma (web/UI design)</p>
+                    <p>This project taught me that great games emerge from a deep passion for the craft, a strong drive 
+                      to push quality content, continuously iterating on game feel, and responding to player feedback. 
+                      These are the skills I'm excited to bring to a collaborative team environment where I can 
+                      contribute across art, engineering, and design.</p>          
+                  </div>
+              </div>
+            <div className="character-space" style={{ height: '125px' }}></div>
         </section>
       </main>
       </div>

@@ -65,6 +65,7 @@
   .menu {
     display: grid;
     gap: 12px;
+    overflow: visible;
   }
 
   .menu-btn {
@@ -77,11 +78,22 @@
     background: rgba(255,255,255,0.06);
     color: #eaeaea;
     cursor: pointer;
-    transition: transform .08s ease, background .2s ease;
+    transition: transform .08s ease, background .2s ease, box-shadow .4s ease;
+    position: relative;
+    z-index: 6000; /* lift above nearby art */
+    /* stronger idle glow so it stands out on dark backgrounds */
+    box-shadow: 0 0 18px 6px rgba(80, 200, 255, 0.65);
+    animation: menu-btn-pulse 2s ease-in-out infinite;
   }
 
   .menu-btn:hover { background: rgba(255,255,255,0.12); }
   .menu-btn:active { transform: translateY(1px); }
+
+  @keyframes menu-btn-pulse {
+    0%   { box-shadow: 0 0 18px 6px rgba(80, 200, 255, 0.65); }
+    50%  { box-shadow: 0 0 30px 16px rgba(130, 225, 255, 0.75); }
+    100% { box-shadow: 0 0 18px 6px rgba(80, 200, 255, 0.45); }
+  }
 
   /* === Content === */
   .content {
@@ -1322,7 +1334,7 @@ body {
   .content-with-image {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 0;
@@ -1369,58 +1381,8 @@ body {
     width: 55%;
   }
 }
+
 @media (max-width: 1024px) {
-
-  .character-space {
-    height: clamp(40px, 5vw, 60px);
-  }
-  .layout {
-    display: grid;
-    grid-template-columns: 180px 1fr; 
-    min-height: 100vh;
-    min-width: min(50%, 450px);
-  }    
-  .character-badge-container {
-    left: 2vh;
-    bottom: 2vh;
-  }  
-  .character-badge-container .character-badge {
-    --badgeH: 90px;
-  }
-  .content-with-card,
-  .content-with-image {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 24px; 
-    padding-bottom: 16px;
-    padding-right: 0;
-    margin-right: 0;
-  }
-  .about-game .content-container {
-    flex-direction: column;
-    padding-top: 24px; 
-    padding-bottom: 16px;
-  }
-  .content-with-card.reverse-layout .character-card-container,
-  .content-with-image.reverse-layout .character-card-container { order: -1; }
-  .content-with-card.reverse-layout .text-content,
-  .content-with-image.reverse-layout .text-content            { order: 1; }
-
-  /* About Creator: ensure side-stack media shows first on narrow screens */
-  .about-creator .content-with-card.reverse-layout .side-stack { order: -1; }
-  .about-creator .content-with-card.reverse-layout .text-content { order: 1; }
-
-  .character-badge-container { transform: none !important; }
-  .character-badge-container .character-badge {
-    border-radius: 50% !important;
-    transform: none !important;
-  }
-  .character-badge[data-hover-effect="true"]:hover:not(.is-disabled) { transform: scale(1.1) !important; }
-  .character-badge[data-hover-effect="true"]:active:not(.is-disabled) { transform: scale(0.95) !important; }
-
-}
-
-@media (max-width: 768px) {
   
   .layout {
     display: grid;
