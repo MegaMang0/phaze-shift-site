@@ -551,7 +551,16 @@
       margin-left: 70px;
       margin-right: 20px;
     }
+  .mainGIF{
+    margin-top: 80;
+    flex-direction: column-reverse;
   }
+  .mainGIF .gif-caption {
+       padding-bottom: 0px;
+  }
+  
+  }
+
 }
 
 /*#endregion*/
