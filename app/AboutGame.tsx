@@ -87,7 +87,7 @@ export default function AboutGamePage() {
               
               <p className="intro-paragraph">
                 Customize your journey in <strong>Phaze Shift!</strong> Switch between 
-                two characters with different playstles in this action adventure game 
+                two characters with different play styles in this action adventure game 
                 where you fight  mechanized bosses, find upgrades that you can combine 
                 to make new ones, and befriend members of various factions. Enjoy 
                 classic 2D gameplay with hand drawn art!

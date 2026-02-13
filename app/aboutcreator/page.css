@@ -20,23 +20,15 @@
     letter-spacing: 0.1em;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
+  .about-creator .text-content .intro-paragraph{
+    line-height: 1.5;
+  }
   .about-creator .content-section {
     margin-bottom: 80px;
   }
   .about-creator .intro-paragraph {
     line-height: 1.2;
     margin-bottom: 20px;
-  }
-  .about-creator .world-intro {
-    font-family: "goldman", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 550;
-    font-variant-caps: normal;
-    color: #fff;
-    text-align: left;
-    letter-spacing: 0.1em;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin: 16px 0 20px;
   }
   .about-creator .subheading {
     font-family: "goldman", sans-serif;
@@ -57,10 +49,10 @@
     font-size: 1.8rem;
   }  
   .about-creator .content-paragraph {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }  
   .about-creator .features-list {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }  
   .about-creator .content-container {
     padding: 20px 15px;
@@ -121,32 +113,54 @@
 /* ----------------------------------------------------------------------- */
 
   .about-creator .content-with-image {
-    display: flex;
-    gap: 40px;
-    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
     font-family: "goldman", sans-serif; 
     font-size: 1.2rem; 
-    font-weight: 550; 
+    font-weight: 550;  
     font-variant-caps: normal; 
-    color: #fff; 
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  }
+  .about-creator .content-with-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: "goldman", sans-serif; 
+    font-size: 1.2rem; 
+    font-weight: 550;  
+    font-variant-caps: normal; 
+    text-align: left; 
+    letter-spacing: 0.1em; 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    color: #fff;
     text-align: left; 
     letter-spacing: 0.1em; 
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
   }
 
   /* Style for the GIF container */
-  .content-with-image .features-gif,
+  .content-with-card .features-gif,
   .content-with-image.reverse-layout .features-gif {
     width: 100%;
-    min-width: 400px; /* Prevent shrinking */
+    min-width: 360px; /* Prevent shrinking */
     max-width: 1000px; /* Control maximum size */
     margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+  .about-creator .content-with-card 
+  .text-content .intro-paragraph{
+    margin-right: -20px;
+  }
+  .about-creator .content-with-image 
+  {
+    margin-right: -20px;
+  }
   }
 /*#endregion*/
 
