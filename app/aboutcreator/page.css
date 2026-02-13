@@ -143,7 +143,6 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
   }
 
-  /* Style for the GIF container */
   .content-with-card .features-gif,
   .content-with-image.reverse-layout .features-gif {
     width: 100%;

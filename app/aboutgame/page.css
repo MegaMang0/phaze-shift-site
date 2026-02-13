@@ -5,7 +5,7 @@
 /* Click to Expand / Shrink Whole Section */ 
 /* ----------------------------------------------------------------------- */
 
-  .content-container {
+  .aboutgame .content-container {
     max-width: 1000px;
     margin: 0 auto;
     padding-top:100px;
@@ -74,5 +74,18 @@
     border-radius: 50px;
     box-shadow: 0 20px 20px rgba(1, 1, 1, 0.8);
     display: block;
+  }
+  
+  .features-gif {
+    width: 100%;
+    min-width: 360px; /* Prevent shrinking */
+    max-width: 1000px; /* Control maximum size */
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 600px){
+   .features-gif {
+      margin-left: -20;
+    }
   }
 /*#endregion*/

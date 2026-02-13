@@ -8,7 +8,7 @@
     max-width: 1000px;
     margin: 0 auto;
     font-family: "goldman", sans-serif; 
-    font-size: 1.1rem; 
+    font-size: 1.2rem; 
     font-weight: 550;  
     font-variant-caps: normal; 
     text-align: left; 
@@ -24,7 +24,7 @@
   }
   .world-intro {
     font-family: "goldman", sans-serif; 
-    font-size: 1.1rem; 
+    font-size: 1.2rem; 
     font-weight: 550;  
     font-variant-caps: normal; 
     text-align: left; 
@@ -32,6 +32,14 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     color: #fff;
   }
+/* ---------------------------- Resizing Logic --------------------------- */
+
+  @media (max-width: 768px) {
+    .world .intro-paragraph {
+      margin-right: -40px;
+    }
+  }
+
 /*#endregion*/
 
 /* #region : "Static Visuals Setup" -------------------------------------- */
@@ -66,6 +74,12 @@
   .world {
     --features-gif-max: 1440px;
   }
+  .world .text-content .visuals{
+    width: 100%;
+    min-width: 360px; /* Prevent shrinking */
+    max-width: 1000px; /* Control maximum size */
+    margin: 0 auto;
+  }
   .world .features-gif img {
     margin: 24px auto;
     width: var(--features-gif-max); 
@@ -91,13 +105,26 @@
     padding-bottom: 0px;
     padding-left: 0px;
     font-family: "goldman", sans-serif; 
-    font-size: 1.1rem; 
+    font-size: 1.3rem; 
+    align-items: center;
     font-weight: 550;  
     font-variant-caps: normal; 
     text-align: left; 
     letter-spacing: 0.1em; 
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     color: #fff; 
+  }
+  .content-with-image .features-gif,
+  .content-with-image.reverse-layout .features-gif {
+    width: 100%;
+    min-width: 360px; /* Prevent shrinking */
+    max-width: 1000px; /* Control maximum size */
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+  .world .content-with-image {
+    font-size: 1.1rem; 
+    }
   }
 /*#endregion*/
 

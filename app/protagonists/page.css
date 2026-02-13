@@ -46,6 +46,9 @@
     .protagonists .content-container {
       padding: 20px 15px;
     }
+    .protagonists .intro-paragraph {
+      margin-right: -40px;
+    }
   }
 /*#endregion*/
 
