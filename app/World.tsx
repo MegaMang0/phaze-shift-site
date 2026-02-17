@@ -198,7 +198,7 @@ export default function AboutGamePage() {
               
             <div className="content-with-image">
               <div className="features-gif">
-                <img src={"assets/gifs/shadow-wood.gif"}></img>
+                <img src={"assets/gifs/praxus-grid-gif.gif"}></img>
               </div>
               
               <p>

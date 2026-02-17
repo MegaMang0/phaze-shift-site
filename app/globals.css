@@ -887,7 +887,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .character-card {
     --fill-scale: 0.;
     --pattern-scale: 0.8;
@@ -1017,7 +1017,7 @@
 }
 
 /* Show only on mobile size */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .menu-button {
     display: block;
   }
@@ -1094,7 +1094,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .scroll-prompt-content {
     gap: 12px;
     padding: 8px 16px;
@@ -1155,7 +1155,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .page-fade {
     height: 150px;
   }
@@ -1221,7 +1221,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .sidebar.art {
     transform: scaleX(0.65);
     transform-origin: left center;
@@ -1242,7 +1242,7 @@ body {
 }
 
 /* MOBILE MODE */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
 
   /* Sidebar hidden unless opened */
   body.sidebar-collapsed .sidebar,
@@ -1280,7 +1280,7 @@ body {
 }
 
 /* DESKTOP MODE OVERRIDE */
-@media (min-width: 769px) {
+@media (min-width: 869px) {
   .sidebar,
   .layout {
     transform: none !important;
@@ -1527,7 +1527,7 @@ body {
 
 /*#endregion*/
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
 
   /* Slide sidebar farther off-screen on homepage */
   .homepage,
