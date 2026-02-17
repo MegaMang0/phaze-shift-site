@@ -319,6 +319,10 @@ export default function AboutCreator() {
                     <p>2D Art: Photoshop, Krita, Procreate, GIMP (portrait art, concept art, sprite work)</p>
                     <p>3D Art: Blender (sculpting, rendering, sprite work)</p>
                     <p>Design: Figma (web/UI design)</p>
+                    <p>This project taught me that great games emerge from a deep passion for the craft, a strong drive 
+                      to push quality content, continuously iterating on game feel, and responding to player feedback. 
+                      These are the skills I'm excited to bring to a collaborative team environment where I can 
+                      contribute across art, engineering, and design.</p>          
                     <p>If you'd like to see the GitHub repo for my website, the link is below:</p>
                       <p>
                         <a 
@@ -328,7 +332,7 @@ export default function AboutCreator() {
                         >
                           https://github.com/MegaMang0/phaze-shift-site
                         </a>
-                      </p>
+                      </p>    
                   </div>
               </div>
             <div className="character-space" style={{ height: '125px' }}></div>
