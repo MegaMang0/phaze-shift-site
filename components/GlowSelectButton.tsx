@@ -76,7 +76,6 @@ export default function GlowSelectButton({
       data-selected={selected ? "true" : "false"}
       data-character={useCharacterTheme ? currentCharacter : undefined}
       aria-pressed={selected}
-      disabled={disabled}
       aria-disabled={disabled || undefined}
       tabIndex={disabled ? -1 : 0}
     >
