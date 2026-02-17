@@ -535,21 +535,21 @@
   pointer-events: none;
 }
 
-.gbtn[disabled], .gbtn.is-disabled {
-  pointer-events: none;
+.gbtn[disabled] img, 
+.gbtn.is-disabled img {
   filter: grayscale(100%);
 }
 
-.page-about .gbtn[disabled] .gbtn-label, 
-.page-about .gbtn.is-disabled .gbtn-label { 
-  color: #fff !important; 
+.gbtn[disabled], 
+.gbtn.is-disabled {
+  pointer-events: none;
 }
 
+.page-about .gbtn[disabled] .gbtn-label { color: #fff !important; }
+
 .page-about .gbtn[disabled] .gbtn-fill,
-.page-about .gbtn[disabled] .gbtn-selected,
-.page-about .gbtn.is-disabled .gbtn-fill,
-.page-about .gbtn.is-disabled .gbtn-selected {
-  filter: grayscale(1);
+.page-about .gbtn[disabled] .gbtn-selected {
+  filter: grayscale(1)
 }
 
 .page-about .gbtn[disabled] .gbtn-outline { filter: none; }
@@ -573,9 +573,6 @@
   filter: brightness(5) saturate(1) contrast(1.1) !important;
 }
 
-.page-about .gbtn.is-small.is-disabled .gbtn-fill {
-  filter: brightness(5) saturate(1) contrast(1.1) !important;
-}
 .page-about .sidebar.art .gbtn::before {
   content: '';
   position: absolute;
