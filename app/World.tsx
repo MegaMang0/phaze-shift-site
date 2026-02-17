@@ -98,7 +98,7 @@ export default function AboutGamePage() {
                   </p>
                   
                   <div className="visuals">
-                    <img src={"assets/static-imgs/talk-ivy.png"}/>
+                    <img src={"assets/gifs/guardians-gif.gif"}/>
                   </div>
                   
                   <p className="intro-paragraph">
@@ -148,7 +148,7 @@ export default function AboutGamePage() {
                 </p>
                 
                 <div className="visuals">
-                  <img src={"assets/static-imgs/chloe-shop.png"}/>
+                  <img src={"assets/gifs/shopkeeps-gif.gif"}/>
                 </div>
                 
                 <p className="intro-paragraph">
