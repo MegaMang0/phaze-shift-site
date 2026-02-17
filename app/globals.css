@@ -532,6 +532,7 @@
 }
 
 .page-about .gbtn[disabled], .page-about .gbtn.is-disabled {
+  cursor: not-allowed;
   pointer-events: none;
 }
 
