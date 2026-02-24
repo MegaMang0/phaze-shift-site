@@ -13,10 +13,10 @@ import MenuButton from "@/components/MenuButton";
 const VALID_CODES = ["recruiter", "resume", "beta tester", "alex"];
 
 const DROPBOX_URLS: Record<string, string> = {
-  "recruiter": "https://www.dropbox.com/your-recruiter-link",
-  "resume": "https://www.dropbox.com/your-resume-link", 
-  "beta tester": "https://www.dropbox.com/your-beta-tester-link",
-  "alex": "https://www.dropbox.com/your-alex-link"
+  "recruiter": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA",
+  "resume": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA", 
+  "beta tester": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA",
+  "alex": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA"
 };
 
 export default function GetDemo() {
