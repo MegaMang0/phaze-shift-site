@@ -1,0 +1,287 @@
+/* ============================================================
+   MAILING LIST PANEL — matches Phaze Shift site aesthetic
+   Fonts: hemihead (button), 5by7 (input/labels), goldman (body)
+   Colors: red #ff3f3f, blue #2a5fc1, dark bg #0f0f12
+   ============================================================ */
+
+/* ── Floating Button ─────────────────────────────────────── */
+
+.mailing-float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+
+  padding: 14px 28px;
+  font-family: "hemihead", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+
+  background: linear-gradient(135deg, #ff3f3f 0%, #2a5fc1 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 18px rgba(255, 63, 63, 0.35),
+    0 4px 18px rgba(42, 95, 193, 0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.mailing-float-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 24px rgba(255, 63, 63, 0.45),
+    0 8px 24px rgba(42, 95, 193, 0.35);
+  background: linear-gradient(135deg, #ff5f4a 0%, #2f6ad4 100%);
+}
+
+.mailing-float-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Backdrop ────────────────────────────────────────────── */
+
+.mailing-panel__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  animation: backdropFadeIn 0.25s ease;
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Slide-up Panel ──────────────────────────────────────── */
+
+.mailing-panel {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  z-index: 999;
+
+  width: min(520px, 92vw);
+
+  background: #0d0d10;
+  border: 1px solid rgba(63, 140, 255, 0.35);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+
+  box-shadow:
+    0 -4px 40px rgba(42, 95, 193, 0.25),
+    0 -2px 16px rgba(255, 63, 63, 0.15);
+
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mailing-panel--open {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Top accent bar */
+.mailing-panel::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff3f3f 0%, #2a5fc1 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+/* ── Inner Content ───────────────────────────────────────── */
+
+.mailing-panel__inner {
+  padding: 28px 32px 36px;
+}
+
+.mailing-panel__header {
+  margin-bottom: 24px;
+}
+
+.mailing-panel__tag {
+  font-family: "5by7", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(63, 140, 255, 0.7);
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mailing-panel__title {
+  font-family: "hemihead", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin: 0 0 10px;
+  text-shadow: 0 0 20px rgba(42, 95, 193, 0.4);
+}
+
+.mailing-panel__sub {
+  font-family: "goldman", sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Form ────────────────────────────────────────────────── */
+
+.mailing-panel__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mailing-panel__input {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: "5by7", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: rgba(15, 15, 18, 0.85);
+  border: 2px solid rgba(63, 140, 255, 0.5);
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.mailing-panel__input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-family: "5by7", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.mailing-panel__input:focus {
+  border-color: #3f8cff;
+  box-shadow: 0 0 0 3px rgba(63, 140, 255, 0.2);
+  transform: scale(1.01);
+}
+
+.mailing-panel__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Shake on error */
+.mailing-panel__input--shake {
+  animation: mailingShake 0.35s ease-in-out;
+}
+
+@keyframes mailingShake {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(-6px); }
+  30%  { transform: translateX(6px); }
+  45%  { transform: translateX(-5px); }
+  60%  { transform: translateX(5px); }
+  75%  { transform: translateX(-3px); }
+  90%  { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+/* ── Submit Button ───────────────────────────────────────── */
+
+.mailing-panel__submit {
+  width: 100%;
+  padding: 16px;
+  font-family: "hemihead", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+
+  background: linear-gradient(135deg, #ff3f3f 0%, #2a5fc1 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(63, 140, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.mailing-panel__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff5f4a 0%, #2f6ad4 100%);
+  box-shadow: 0 6px 20px rgba(63, 140, 255, 0.4);
+}
+
+.mailing-panel__submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.mailing-panel__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Error Message ───────────────────────────────────────── */
+
+.mailing-panel__error {
+  font-family: "5by7", sans-serif;
+  font-size: 0.9rem;
+  color: #ff3f3f;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0;
+  animation: mailingFadeIn 0.25s ease;
+}
+
+/* ── Success State ───────────────────────────────────────── */
+
+.mailing-panel__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  animation: mailingFadeIn 0.3s ease;
+}
+
+.mailing-panel__success-icon {
+  font-size: 2.2rem;
+  color: #3f8cff;
+  text-shadow: 0 0 20px rgba(63, 140, 255, 0.6);
+}
+
+.mailing-panel__success p {
+  font-family: "goldman", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes mailingFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .mailing-float-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 20px;
+    font-size: 0.78rem;
+  }
+
+  .mailing-panel__inner {
+    padding: 22px 20px 28px;
+  }
+
+  .mailing-panel__title {
+    font-size: 1.2rem;
+  }
+}
