@@ -9,16 +9,6 @@ import MenuButton from "@/components/MenuButton";
     document.body.classList.toggle("sidebar-open");
   }
 
-// List of valid codes (unlimited use)
-const VALID_CODES = ["recruiter", "resume", "beta tester", "alex"];
-
-const DROPBOX_URLS: Record<string, string> = {
-  "recruiter": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA",
-  "resume": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA", 
-  "beta tester": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA",
-  "alex": "https://1drv.ms/u/c/8860e9ea577f0697/IQB1hX4IQITNQ4YyhR5Q83fNARkFZleNE3iyY5pCU70ekjA"
-};
-
 export default function GetDemo() {
   const { currentCharacter } = useCharacter();
   const [code, setCode] = useState("");
@@ -27,21 +17,22 @@ export default function GetDemo() {
 
   {/* ------------------- DOWNLOAD CODE INPUT LOGIC ------------------- */}
 
-  const handleSubmit = () => {
-    const normalizedCode = code.trim().toLowerCase();
-    
-    if (VALID_CODES.includes(normalizedCode)) {
-      const dropboxUrl = DROPBOX_URLS[normalizedCode] || DROPBOX_URLS["recruiter"];
-      window.location.href = dropboxUrl;
+  const handleSubmit = async () => {
+    const res = await fetch("/api/validate-code", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ code }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      window.location.href = data.url;
     } else {
-      // Invalid code - show error and change character images
       setError("Invalid Code!");
       setIsInvalid(true);
-      
-      // Reset error after 3 seconds (optional)
-      setTimeout(() => {
-        setError("");
-      }, 3000);
     }
   };
   
