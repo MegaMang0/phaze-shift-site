@@ -96,11 +96,13 @@ export default function Protagonists() {
               <div className="text-content">
                
                 <p className="intro-paragraph">
-                  Aqua is one of the two main characters of Phaze Shift.
+                  Aqua is one of the two main characters of Phaze Shift. She is a warm, positive soul. 
+                  Aqua can sometimes be stubborn and a little impulsive, but she does her best 
+                  to see the good in others. She is quick to help others, and is fiercely loyal.
                 </p>
                 
                 <p className="intro-paragraph">
-                  She is a scythe-wielding melee combatant. She is athletic, nimble, 
+                  Aqua is a scythe-wielding melee combatant. She is athletic, nimble, 
                   and strong. While she cannot attack from a distance, her large, 
                   wide arching swings from her scythe pack quite a punch!
                 </p>
@@ -114,12 +116,6 @@ export default function Protagonists() {
                   Her scythe can interact with the environment in a way 
                   blasters cannot. Experiment!
                 </p>
-                
-                <p className="intro-paragraph">
-                  Aqua is a warm, positive soul. She can sometimes be stubborn and 
-                  a little impulsive, but she does her best to see the good in others. 
-                  She is quick to help others, and is fiercely loyal.
-                </p>
               </div>
             </div>
 
@@ -129,10 +125,13 @@ export default function Protagonists() {
                 
                   <p className="intro-paragraph">
                     Redd is the deuteragonist of Phaze Shift.
+                    He is a sarcastic, yet rational person. Redd will often recommend 
+                    the most pragmatic approach, but will still yield to those who 
+                    are more altruistic.
                   </p>
                 
                   <p className="intro-paragraph">
-                    He is a master marksman. He is capable with almost any weapon, 
+                    Redd is a master marksman. He is capable with almost any weapon, 
                     but prefers to fight from afar with his custom blaster. His 
                     attacks are more precise, and require good aim.
                   </p>
@@ -145,12 +144,6 @@ export default function Protagonists() {
                     Try using Redd when you want to stay out of harm’s way or 
                     analyze enemy attack patterns. He can shoot in 8 directions, 
                     and can damage enemies from quite a distance away!
-                  </p>
-                
-                  <p className="intro-paragraph">
-                    Redd is a sarcastic, yet rational person. He will often recommend 
-                    the most pragmatic approach, but will still yield to those who 
-                    are more altruistic.
                   </p>
                 
                 </div>
