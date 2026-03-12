@@ -98,7 +98,7 @@ export default function Protagonists() {
                 <p className="intro-paragraph">
                   Aqua is one of the two main characters of Phaze Shift. She is a warm, positive soul. 
                   Aqua can sometimes be stubborn and a little impulsive, but she does her best 
-                  to see the good in others. She is quick to help others, and is fiercely loyal.
+                  to see the good in people. She is quick to help others, and is fiercely loyal.
                 </p>
                 
                 <p className="intro-paragraph">
