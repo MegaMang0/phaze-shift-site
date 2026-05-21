@@ -98,8 +98,7 @@ export default function AboutCreator() {
                     <div className="text-content">
                       <p className="intro-paragraph">
                        I'm Danny-O! The sole developer of "Phaze Shift", a high-fidelity 2D action platformer. 
-                       I am a multi-disciplinary Technical Artist, Gameplay Programmer, and UI Engineer seeking remote
-                       opportunities where I can leverage my full-stack development expertise and C# proficiency.
+                       I am a multi-disciplinary Technical Artist, Gameplay Programmer, and UI Engineer.
                        I am completely bilingual (English/Spanish) and can enable seamless communication across diverse teams. 
                       </p>
                       
